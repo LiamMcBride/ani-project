@@ -1,0 +1,1 @@
+export const searchError = "Error with search request.";
