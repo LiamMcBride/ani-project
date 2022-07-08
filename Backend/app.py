@@ -1,4 +1,5 @@
 import json
+from Series import Series
 
 from flask import Flask, redirect, request, url_for
 from flask_cors import CORS, cross_origin
@@ -9,7 +10,8 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/hello/', methods=['GET', 'POST'])
 def welcome():
-    return 'Hello, world!'
+    new_series = Series("Attack on Titan", "Joe Mamma", "Show", 110)
+    return new_series.export()
 
 # @app.route('/current/', methods=['GET'])
 # def current_song():
