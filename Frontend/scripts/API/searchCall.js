@@ -1,6 +1,6 @@
-import { searchCallError } from "../Errors.js";
+// import { searchCallError } from "../Errors.js";
 
-export function searchCall(){
+function searchCall(){
     fetch("https://localhost:105/hello/")
         .then((response) => {
             console.log(response);

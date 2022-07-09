@@ -1,7 +1,7 @@
-export function searchBar(document){
+function searchBar(document){
     return document.getElementById("search-input");
 }
 
-export function searchBarButton(document){
+function searchBarButton(document){
     return document.getElementById("search-button");
 }

@@ -1,1 +1,1 @@
-export const searchError = "Error with search request.";
+const searchError = "Error with search request.";
