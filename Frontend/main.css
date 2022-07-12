@@ -104,7 +104,9 @@ button:active {
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr;
     grid-column-gap: 34px;
+    height: 90vh;
 }
 
 .search-card button{
@@ -113,6 +115,15 @@ button:active {
 
 .search-card input[type=text]{
     background-color: var(--second-gray);
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.feed{
+    overflow: scroll;
+    height: 100%;
 }
 
 .current-feed{
@@ -135,7 +146,7 @@ button:active {
 }
 
 .nav-bar{
-    height: 75px;
+    height: 5vh;
     width: 100%;
     background-color: var(--first-gray);
     opacity: var(--base-opacity);
