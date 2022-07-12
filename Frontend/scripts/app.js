@@ -26,6 +26,24 @@ function search(){
     searchCall();
 }
 
+function heading4(text){
+    let heading = document.createElement("h4");
+    heading.innerText = text;
+    return heading;
+}
+
+function baseButtonGroup(){
+    let group = document.createElement("div");
+    group.classList.add("button-group");
+    return group;
+}
+
+function baseButton(text){
+    let button = document.createElement("button");
+    button.appendChild(heading4(text));
+    return button;
+}
+
 function progressBar(progress=0, type){
     let bar = document.createElement("div");
     bar.classList.add("progress-bar-outer");
@@ -53,6 +71,10 @@ function currentShowCard(title, progress=0, rating=5){
     ratingBarTitle.innerText = "Rating";
     card.appendChild(ratingBarTitle);
     card.appendChild(progressBar(rating, "rating"));
+    let group = baseButtonGroup();
+    let buttonText = ["Watched", "Rate"];
+    buttonText.forEach((text) => group.appendChild(baseButton(text)));
+    card.appendChild(group);
     return card;
 }
 
