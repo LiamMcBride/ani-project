@@ -78,8 +78,50 @@ function currentShowCard(title, progress=0, rating=5){
     return card;
 }
 
+function generateCurrentShows(showObject){
+    let shows = showObject.map(({ title, progress, rating }) => {
+        return currentShowCard(title, progress, rating);
+    });
+    return shows;
+}
+
+let showObject = [
+    {
+        "title": "Naruto",
+        "progress": "65",
+        "rating": "50",
+    },
+    {
+        "title": "Death Note",
+        "progress": "0",
+        "rating": "0",
+    },
+    {
+        "title": "Demon Slayer",
+        "progress": "100",
+        "rating": "89",
+    },
+    {
+        "title": "One Punch Man",
+        "progress": "13",
+        "rating": "78",
+    },
+    {
+        "title": "Mob Psyco",
+        "progress": "22",
+        "rating": "33",
+    },
+    {
+        "title": "Dr. Stone",
+        "progress": "90",
+        "rating": "44",
+    },
+]
+
 let currentFeed = document.getElementsByClassName("current-feed")[0];
-currentFeed.appendChild(currentShowCard("blah", 83, 10));
+// currentFeed.appendChild(currentShowCard("blah", 83, 10));
+let shows = generateCurrentShows(showObject);
+shows.forEach(show => currentFeed.appendChild(show));
 let searchButton = searchBarButton(document);
 searchButton.addEventListener('click', function(e){
     e.preventDefault();
