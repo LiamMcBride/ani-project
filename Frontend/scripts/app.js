@@ -118,12 +118,12 @@ let showObject = [
     },
 ]
 
-let currentFeed = document.getElementsByClassName("current-feed")[0];
-// currentFeed.appendChild(currentShowCard("blah", 83, 10));
-let shows = generateCurrentShows(showObject);
-shows.forEach(show => currentFeed.appendChild(show));
-let searchButton = searchBarButton(document);
-searchButton.addEventListener('click', function(e){
-    e.preventDefault();
-    searchCall();
-})
+// let currentFeed = document.getElementsByClassName("current-feed")[0];
+// // currentFeed.appendChild(currentShowCard("blah", 83, 10));
+// let shows = generateCurrentShows(showObject);
+// shows.forEach(show => currentFeed.appendChild(show));
+// let searchButton = searchBarButton(document);
+// searchButton.addEventListener('click', function(e){
+//     e.preventDefault();
+//     searchCall();
+// })

@@ -1,12 +1,15 @@
 :root{
     --black: #121212;
-    --first-gray: #3e3e3e;
-    --second-gray: #515050;
+    /* --first-gray: #3e3e3e; */
+    --first-gray: #363636;
+    /* --second-gray: #515050; */
+    --second-gray: #545454;
     --third-gray: #858484;
     --text-color: #ffffff;
     --purple: #BB86FC;
     --base-opacity: 100%;
     --text-opacity: 80%;
+    --border-radius: 5px;
 }
 
 body{
@@ -57,7 +60,7 @@ h5{
     height: 50px;
     background-color: red;
     display: block;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
 }
 
 .button-group{
@@ -69,7 +72,7 @@ h5{
 }
 
 button{
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     background-color: var(--second-gray);
     padding: 10px;
     border: none;
@@ -116,7 +119,7 @@ button:active {
     opacity: var(--base-opacity);
     min-height: 35px;
     max-height: 200px;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     padding: 20px;
     margin-bottom: 20px;
     
@@ -125,7 +128,7 @@ button:active {
 .main-content-div{
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 34px;
     height: 90vh;
@@ -175,12 +178,109 @@ button:active {
 }
 
 input[type=text]{
-    border-radius: 15px;
+    border-radius: var(--border-radius);
     height: 30px;
     width: 80%;
 }
 
-/* button{
-    height: 35px;
-    border-radius: 15px;
+.card-title{
+    /* display: flex; */
+    /* align-items: center; */
+}
+
+.card-title{
+    list-style-type: none;
+    justify-content: space-between;
+    /* align-items: center; */
+    display: flex;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.options-button-dot-grid{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1px;
+    width: 20px;
+    height: 100%;
+    
+    /* float: right; */
+}
+
+.options-button{
+    padding: 5px;
+    border-radius: var(3px);
+    /* height: 20px; */
+}
+
+.card-title ul, .card-title ul li {
+    height: 100%;
+}
+
+.card-title ul li h3{
+    margin-top: 0;
+}
+
+.card-title ul li div{
+    position: relative;
+}
+
+.options-button:hover{
+    /* border-color: red;
+    border-width: 2px;
+    border-style: solid; */
+    background-color: var(--third-gray);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.current-card-options{
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.options-button:hover + .current-card-options, .current-card-options:hover{
+    display: block;
+    position: absolute;
+}
+
+/* .options-button::selection{
+    background-color: red;
 } */
+
+.dot{
+    width: 5px;
+    height: 5px;
+    background-color: var(--second-gray);
+    border-radius: 50%;
+}
+
+.current-show-card-wrapper{
+    display: flex;
+    height: 160px;
+}
+
+.card-image{
+    float: left;
+    margin-right: 20px;
+    height: 100%;
+}
+
+.card-content{
+    float: right;
+    width: 100%;
+}
+
+.show-image{
+    width: auto;
+    height: 100%;
+}
