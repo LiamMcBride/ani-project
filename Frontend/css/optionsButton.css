@@ -1,0 +1,25 @@
+.options-button-dot-grid{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1px;
+    width: 20px;
+    height: 100%;
+}
+
+.options-button{
+    padding: 5px;
+    border-radius: var(3px);
+}
+
+.options-button:hover{
+    background-color: var(--third-gray);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.dot{
+    width: 5px;
+    height: 5px;
+    background-color: var(--second-gray);
+    border-radius: 50%;
+}

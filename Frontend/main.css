@@ -82,33 +82,6 @@ button:active {
     grid-gap: 25px;
 }
 
-/* Progress Bar */
-
-.progress-bar-outer{
-    width: 100%;
-    height: 8px;
-    background-color: var(--second-gray);
-    margin: 5px 0;
-}
-
-.progress-bar-inner{
-    display: block;
-    /* width: 75%; */
-    height: 8px;
-    background-color: var(--purple);
-}
-
-.card{
-    background-color: var(--first-gray);
-    opacity: var(--base-opacity);
-    min-height: 35px;
-    max-height: 200px;
-    border-radius: var(--border-radius);
-    padding: 20px;
-    margin-bottom: 20px;
-    
-}
-
 .dashboard-page-content-grid{
     padding: 20px;
     display: grid;
@@ -116,14 +89,6 @@ button:active {
     grid-template-rows: 1fr 8fr;
     grid-column-gap: 34px;
     height: 90vh;
-}
-
-.search-card button{
-    background-color: var(--purple);
-}
-
-.search-card input[type=text]{
-    background-color: var(--second-gray);
 }
 
 ::-webkit-scrollbar{
@@ -154,106 +119,7 @@ input[type=text]{
     width: 80%;
 }
 
-.title-card{
-    /* position: fixed; */
-    z-index: 1;
-    /* width: 100%; */
-
-}
-
-.card-title{
-    list-style-type: none;
-    justify-content: space-between;
-    /* align-items: center; */
-    display: flex;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    width: 100%;
-}
-
 li {
     margin: 0;
     padding: 0;
-}
-
-.options-button-dot-grid{
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1px;
-    width: 20px;
-    height: 100%;
-    
-    /* float: right; */
-}
-
-.options-button{
-    padding: 5px;
-    border-radius: var(3px);
-    /* height: 20px; */
-}
-
-.card-title ul, .card-title ul li {
-    height: 100%;
-}
-
-.card-title ul li h3{
-    margin-top: 0;
-}
-
-.card-title ul li div{
-    position: relative;
-}
-
-.options-button:hover{
-    /* border-color: red;
-    border-width: 2px;
-    border-style: solid; */
-    background-color: var(--third-gray);
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
-.current-card-options{
-    display: none;
-    width: 100px;
-    height: 100px;
-    background-color: red;
-}
-
-.options-button:hover + .current-card-options, .current-card-options:hover{
-    display: block;
-    position: absolute;
-}
-
-/* .options-button::selection{
-    background-color: red;
-} */
-
-.dot{
-    width: 5px;
-    height: 5px;
-    background-color: var(--second-gray);
-    border-radius: 50%;
-}
-
-.current-show-card-wrapper{
-    display: flex;
-    height: 160px;
-}
-
-.card-image{
-    float: left;
-    margin-right: 20px;
-    height: 100%;
-}
-
-.card-content{
-    float: right;
-    width: 100%;
-}
-
-.show-image{
-    width: auto;
-    height: 100%;
 }
