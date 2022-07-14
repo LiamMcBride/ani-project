@@ -170,7 +170,7 @@ let showObject = [
     },
 ]
 
-let currentFeed = document.getElementsByClassName("current-feed")[0];
+let currentFeed = document.getElementById("current-feed");
 // currentFeed.appendChild(currentShowCard("blah", 83, 10));
 let shows = generateCurrentShows(showObject);
 shows.forEach(show => currentFeed.appendChild(show));

@@ -1,12 +1,10 @@
 :root{
     --black: #121212;
-    /* --first-gray: #3e3e3e; */
     --first-gray: #363636;
-    /* --second-gray: #515050; */
     --second-gray: #545454;
     --third-gray: #858484;
-    --text-color: #ffffff;
     --purple: #BB86FC;
+    --text-color: #ffffff;
     --base-opacity: 100%;
     --text-opacity: 80%;
     --border-radius: 5px;
@@ -46,9 +44,22 @@ h5{
     color: var(--third-gray);
 }
 
-.name-holder{
-    /* display: grid;
-    grid-template-columns: 1fr 1fr; */
+button{
+    border-radius: var(--border-radius);
+    background-color: var(--second-gray);
+    padding: 10px;
+    border: none;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    
+
+}
+
+button:hover{
+    background-color: var(--first-gray);
+}
+
+button:active {
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
 }
 
 .name-holder h3, .name-holder h5{
@@ -71,34 +82,7 @@ h5{
     grid-gap: 25px;
 }
 
-button{
-    border-radius: var(--border-radius);
-    background-color: var(--second-gray);
-    padding: 10px;
-    border: none;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    
-
-}
-
-button:hover{
-    background-color: var(--first-gray);
-}
-
-button:active {
-    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
-}
-
-/* ul{
-    list-style-type: none;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    width: 100%;
-} */
+/* Progress Bar */
 
 .progress-bar-outer{
     width: 100%;
@@ -125,7 +109,7 @@ button:active {
     
 }
 
-.main-content-div{
+.dashboard-page-content-grid{
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -150,19 +134,6 @@ button:active {
     overflow: scroll;
     height: 100%;
 }
-
-.current-feed{
-    
-}
-
-.search-feed{
-
-}
-
-.friend-feed{
-
-}
-
 
 .content-div{
     margin: 0 auto;
