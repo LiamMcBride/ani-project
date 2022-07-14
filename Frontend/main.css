@@ -129,7 +129,7 @@ button:active {
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 8fr;
     grid-column-gap: 34px;
     height: 90vh;
 }
@@ -183,9 +183,11 @@ input[type=text]{
     width: 80%;
 }
 
-.card-title{
-    /* display: flex; */
-    /* align-items: center; */
+.title-card{
+    /* position: fixed; */
+    z-index: 1;
+    /* width: 100%; */
+
 }
 
 .card-title{

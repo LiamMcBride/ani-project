@@ -60,21 +60,53 @@ function currentShowCard(title, progress=0, rating=5){
     let card = document.createElement("div");
     card.classList.add("card");
     card.classList.add("current-show-card");
+    
+    let cardWrapper = document.createElement("div");
+    cardWrapper.classList.add("current-show-card-wrapper");
+
+    let cardImage = document.createElement("div");
+    cardImage.classList.add("card-image");
+    
+    let image = document.createElement("img");
+    image.classList.add("show-image");
+    image.src = "Assets/TempAssets/narutocover.png";
+
+    cardImage.appendChild(image);
+    cardWrapper.appendChild(cardImage);
+
+    let cardContent = document.createElement("div");
+    cardContent.classList.add("card-content");
+
+    let cardTitleList = document.createElement("ul");
+    cardTitleList.classList.add("card-title");
+
     let heading = document.createElement("h3");
     heading.innerText = title;
-    card.appendChild(heading);
+
+    cardTitleList.appendChild(
+        document.createElement("li").appendChild(heading)
+    );
+    cardTitleList.appendChild(
+        document.createElement("li").appendChild(generateOptionsButton())
+    );
+
+    cardContent.append(cardTitleList);
+
+    // card.appendChild(heading);
     let progressBarTitle = document.createElement("h4");
     progressBarTitle.innerText = "Progress";
-    card.appendChild(progressBarTitle);
-    card.appendChild(progressBar(progress, "progress"));
+    cardContent.appendChild(progressBarTitle);
+    cardContent.appendChild(progressBar(progress, "progress"));
     let ratingBarTitle = document.createElement("h4");
     ratingBarTitle.innerText = "Rating";
-    card.appendChild(ratingBarTitle);
-    card.appendChild(progressBar(rating, "rating"));
+    cardContent.appendChild(ratingBarTitle);
+    cardContent.appendChild(progressBar(rating, "rating"));
     let group = baseButtonGroup();
     let buttonText = ["Watched", "Rate"];
     buttonText.forEach((text) => group.appendChild(baseButton(text)));
-    card.appendChild(group);
+    cardContent.appendChild(group);
+    cardWrapper.appendChild(cardContent);
+    card.appendChild(cardWrapper);
     return card;
 }
 
@@ -86,7 +118,23 @@ function generateCurrentShows(showObject){
 }
 
 function generateOptionsButton(){
+    let button = document.createElement("div");
+    button.classList.add("options-button");
     
+    let grid = document.createElement("div");
+    grid.classList.add("options-button-dot-grid");
+    
+    let dots = [
+        document.createElement("div"),
+        document.createElement("div"),
+        document.createElement("div")
+    ];
+    dots.forEach(dot => {
+        dot.classList.add("dot");
+        grid.appendChild(dot);
+    });
+    button.appendChild(grid);
+    return document.createElement("div").appendChild(button);
 }
 
 let showObject = [
@@ -122,12 +170,12 @@ let showObject = [
     },
 ]
 
-// let currentFeed = document.getElementsByClassName("current-feed")[0];
-// // currentFeed.appendChild(currentShowCard("blah", 83, 10));
-// let shows = generateCurrentShows(showObject);
-// shows.forEach(show => currentFeed.appendChild(show));
-// let searchButton = searchBarButton(document);
-// searchButton.addEventListener('click', function(e){
-//     e.preventDefault();
-//     searchCall();
-// })
+let currentFeed = document.getElementsByClassName("current-feed")[0];
+// currentFeed.appendChild(currentShowCard("blah", 83, 10));
+let shows = generateCurrentShows(showObject);
+shows.forEach(show => currentFeed.appendChild(show));
+let searchButton = searchBarButton(document);
+searchButton.addEventListener('click', function(e){
+    e.preventDefault();
+    searchCall();
+})
