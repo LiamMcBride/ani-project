@@ -44,14 +44,23 @@ h5{
     color: var(--third-gray);
 }
 
+.button-group{
+    /* margin: 15px 0; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    grid-gap: 25px;
+    /* float: inline-end */
+    position: absolute;
+    bottom: 0px;
+}
+
 button{
     border-radius: var(--border-radius);
     background-color: var(--second-gray);
     padding: 10px;
     border: none;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    
-
 }
 
 button:hover{
@@ -74,13 +83,6 @@ button:active {
     border-radius: var(--border-radius);
 }
 
-.button-group{
-    margin: 15px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    grid-gap: 25px;
-}
 
 .dashboard-page-content-grid{
     padding: 20px;
@@ -122,4 +124,8 @@ input[type=text]{
 li {
     margin: 0;
     padding: 0;
+}
+
+li h3, li h5{
+    display: inline;
 }

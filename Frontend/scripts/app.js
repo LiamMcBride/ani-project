@@ -68,7 +68,7 @@ function currentShowCard(title, progress=0, rating=5){
     cardImage.classList.add("card-image");
     
     let image = document.createElement("img");
-    image.classList.add("show-image");
+    image.classList.add("current-image");
     image.src = "Assets/TempAssets/narutocover.png";
 
     cardImage.appendChild(image);
