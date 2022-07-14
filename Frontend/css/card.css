@@ -44,18 +44,6 @@
     width: 100%;
 }
 
-.current-card-options{
-    display: none;
-    width: 100px;
-    height: 100px;
-    background-color: red;
-}
-
-.options-button:hover + .current-card-options, .current-card-options:hover{
-    display: block;
-    position: absolute;
-}
-
 .current-show-card-wrapper{
     display: flex;
     height: 160px;
