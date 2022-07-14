@@ -2,18 +2,58 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Liam McBride">
+    <meta name="author" content="ani-project">
     <script src="./scripts/app.js" defer></script>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="./css/card.css">
+    <link rel="stylesheet" type="text/css" href="./css/progressBar.css">
+    <link rel="stylesheet" type="text/css" href="./css/optionsButton.css">
     <title>Ani Project</title>
 </head>
 <body>
-    <div class="content-div">
-        <h2>Search for a show</h2>
-        <button id="search-button" value="search-submit">Search</button>
-        <input type="text" value="" id="search-input">
+    <div class="nav-bar"></div>
+    <div class="dashboard-page-content-grid">
+        <div class="card title-card">
+            <h2>Current Shows</h2>
+        </div>
+        <div class="card title-card">
+            <h2>Find your show</h2>
+        </div>
+        <div class="card title-card">
+            <h2>Friend Feed</h2>
+        </div>
+        <div class="feed" id="current-feed"></div>
+        <div class="feed" id="search-feed">
+            <div class="card search-card">
+                <button id="search-button"><h4>Search</h4></button>
+                <input type="text" value="" id="search-input">
+            </div>
+        </div>
+        <div class="feed" id="friend-feed">
+            <div class="card friend-post-card">
+                    <div style="display: grid; grid-template-columns: 2fr 1fr; grid-gap: 10px;">
+                        <div>
+                            <div class="name-holder">
+                                <h3 class="user-name">Dan</h3>
+                                <h5>a minute ago</h5>
+                            </div>
+                            <h4>Progress</h4>
+                            <div class="progress-bar-outer">
+                                <div class="progress-bar-inner"></div>
+                            </div>
+                        </div>
+                        <div class="icon"></div>
+                    </div>
+                    <h4 class="friend-post-description">
+                        Just watched Ep 4 of Death Note. Very good!
+                    </h4>
+                    <div class="button-group">
+                        <button><h4>Watched Ep, S4</h4></button>
+                        <button><h4>Rate</h4></button>
+                    </div>                
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <footer></footer>

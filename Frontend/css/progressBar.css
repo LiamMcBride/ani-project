@@ -1,0 +1,14 @@
+/* Progress Bar */
+
+.progress-bar-outer{
+    width: 100%;
+    height: 8px;
+    background-color: var(--second-gray);
+    margin: 5px 0;
+}
+
+.progress-bar-inner{
+    display: block;
+    height: 8px;
+    background-color: var(--purple);
+}

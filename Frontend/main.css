@@ -1,5 +1,103 @@
+:root{
+    --black: #121212;
+    --first-gray: #363636;
+    --second-gray: #545454;
+    --third-gray: #858484;
+    --purple: #BB86FC;
+    --text-color: #ffffff;
+    --base-opacity: 100%;
+    --text-opacity: 80%;
+    --border-radius: 5px;
+}
+
 body{
-    padding: 50px;
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4{
+    color: var(--text-color);
+    opacity: var(--text-opacity);
+    margin: 5px 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+h1{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+h4{
+    font-size: 15px;
+    font-weight: normal;
+}
+
+h5{
+    color: var(--third-gray);
+}
+
+button{
+    border-radius: var(--border-radius);
+    background-color: var(--second-gray);
+    padding: 10px;
+    border: none;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    
+
+}
+
+button:hover{
+    background-color: var(--first-gray);
+}
+
+button:active {
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.name-holder h3, .name-holder h5{
+    display: inline;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    display: block;
+    border-radius: var(--border-radius);
+}
+
+.button-group{
+    margin: 15px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    grid-gap: 25px;
+}
+
+.dashboard-page-content-grid{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 8fr;
+    grid-column-gap: 34px;
+    height: 90vh;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.feed{
+    overflow: scroll;
+    height: 100%;
 }
 
 .content-div{
@@ -8,13 +106,20 @@ body{
     text-align: center;
 }
 
-input[type=text]{
-    border-radius: 15px;
-    height: 30px;
-    width: 50%;
+.nav-bar{
+    height: 5vh;
+    width: 100%;
+    background-color: var(--first-gray);
+    opacity: var(--base-opacity);
 }
 
-button{
-    height: 35px;
-    border-radius: 15px;
+input[type=text]{
+    border-radius: var(--border-radius);
+    height: 30px;
+    width: 80%;
+}
+
+li {
+    margin: 0;
+    padding: 0;
 }
