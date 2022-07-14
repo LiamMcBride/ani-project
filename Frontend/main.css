@@ -55,6 +55,17 @@ h5{
     bottom: 0px;
 }
 
+.search-card-button-group{
+    /* margin: 15px 0; */
+    display: grid;
+    grid-template-columns: 1fr .25fr;
+    width: 100%;
+    grid-gap: 25px;
+    /* float: inline-end */
+    position: absolute;
+    bottom: 0px;
+}
+
 button{
     border-radius: var(--border-radius);
     background-color: var(--second-gray);
@@ -128,4 +139,12 @@ li {
 
 li h3, li h5{
     display: inline;
+}
+
+.bookmark-button{
+    max-width: 50px;
+}
+
+.bookmark-button img{
+    max-height: 20px;
 }
