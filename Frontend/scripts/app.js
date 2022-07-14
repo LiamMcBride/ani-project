@@ -85,6 +85,10 @@ function generateCurrentShows(showObject){
     return shows;
 }
 
+function generateOptionsButton(){
+    
+}
+
 let showObject = [
     {
         "title": "Naruto",
