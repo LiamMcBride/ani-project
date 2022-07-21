@@ -2,7 +2,7 @@
     background-color: var(--first-gray);
     opacity: var(--base-opacity);
     min-height: 35px;
-    max-height: 200px;
+    /* max-height: 200px; */
     border-radius: var(--border-radius);
     padding: 20px;
     margin-bottom: 20px;

@@ -26,6 +26,10 @@ h1, h2, h3, h4{
     font-weight: bolder;
 }
 
+.clickable, button{
+    cursor: pointer;
+}
+
 h1{
     font-size: 30px;
 }
@@ -91,6 +95,15 @@ button:active {
     height: 90vh;
 }
 
+.settings-page-content-grid{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 25px;
+    height: 90vh;
+}
+
 ::-webkit-scrollbar{
     display: none;
 }
@@ -123,3 +136,38 @@ li {
     margin: 0;
     padding: 0;
 }
+
+.user-large-picture{
+    max-width: 200px;
+}
+
+.settings-wrapper{
+    display: flex;
+}
+
+.settings-links{
+    float:left;
+}
+
+.settings-links ul{
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    /* display: flex; */
+    margin: 0;
+    padding: 15px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.settings-links ul li{
+    padding: 5px;
+    border-radius: var(--border-radius);
+}
+
+.settings-links ul li:hover{
+    /* border: #121212 1px;
+    border-style: solid; */
+    background-color: var(--second-gray);
+}
+
