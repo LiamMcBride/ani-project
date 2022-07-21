@@ -74,6 +74,13 @@ button:active {
     border-radius: var(--border-radius);
 }
 
+.user-icon{
+    border-radius: var(--border-radius);
+    width: 35px;
+    height: 35px;
+    /* float: right; */
+}
+
 .button-group{
     margin: 15px 0;
     display: grid;
@@ -107,10 +114,12 @@ button:active {
 }
 
 .nav-bar{
-    height: 5vh;
+    /* height: 5vh; */
+    padding: 10px;
     width: 100%;
     background-color: var(--first-gray);
     opacity: var(--base-opacity);
+    display: flex;
 }
 
 input[type=text]{
