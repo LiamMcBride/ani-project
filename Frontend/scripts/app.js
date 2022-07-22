@@ -14,6 +14,20 @@ function searchCall(){
         })
 }
 
+function fetchCurrentShows(){
+    fetch("http://localhost:105/current-shows/")
+        .then((response) => {
+            response.json().then((value) => {
+                console.log(value)
+                genShows(value)
+            })
+            // console.log(response.json());
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+}
+
 function searchBar(document){
     return document.getElementById("search-input");
 }
@@ -137,45 +151,21 @@ function generateOptionsButton(){
     return document.createElement("div").appendChild(button);
 }
 
-let showObject = [
-    {
-        "title": "Naruto",
-        "progress": "65",
-        "rating": "50",
-    },
-    {
-        "title": "Death Note",
-        "progress": "0",
-        "rating": "0",
-    },
-    {
-        "title": "Demon Slayer",
-        "progress": "100",
-        "rating": "89",
-    },
-    {
-        "title": "One Punch Man",
-        "progress": "13",
-        "rating": "78",
-    },
-    {
-        "title": "Mob Psyco",
-        "progress": "22",
-        "rating": "33",
-    },
-    {
-        "title": "Dr. Stone",
-        "progress": "90",
-        "rating": "44",
-    },
-]
+// let showObject = []
 
-let currentFeed = document.getElementById("current-feed");
-// currentFeed.appendChild(currentShowCard("blah", 83, 10));
-let shows = generateCurrentShows(showObject);
-shows.forEach(show => currentFeed.appendChild(show));
-let searchButton = searchBarButton(document);
-searchButton.addEventListener('click', function(e){
-    e.preventDefault();
-    searchCall();
-})
+// showObject.push(fetchCurrentShows());
+fetchCurrentShows();
+
+function genShows(value){
+    let showObject = []
+    showObject.push(value);
+    let currentFeed = document.getElementById("current-feed");
+    // currentFeed.appendChild(currentShowCard("blah", 83, 10));
+    let shows = generateCurrentShows(showObject);
+    shows.forEach(show => currentFeed.appendChild(show));
+    let searchButton = searchBarButton(document);
+    searchButton.addEventListener('click', function(e){
+        e.preventDefault();
+        searchCall();
+    })
+}
