@@ -12,9 +12,30 @@
     border-radius: var(3px);
 }
 
+.options-button-holder{
+    position: relative;
+    overflow: visible;
+    width: 100%;
+}
+
 .options-button:hover{
     background-color: var(--third-gray);
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.current-card-options{
+    display: none;
+    width: 100px;
+    height: 200px;
+    background-color: red;
+    /* left: 50%; */
+}
+
+.options-button:hover + .current-card-options, .current-card-options:hover{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 400px;
 }
 
 .dot{
