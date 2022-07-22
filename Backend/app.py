@@ -8,10 +8,10 @@ app = Flask(__name__)
 
 CORS(app, resources={r"/*": {"origins": "*"}})
 
-@app.route('/hello/', methods=['GET', 'POST'])
+@app.route('/current-shows/', methods=['GET', 'POST'])
 def welcome():
-    new_series = Series("Attack on Titan", "Joe Mamma", "Show", 110)
-    return new_series.export()
+    new_series = Series("Attack on Titan", "Joe Mamma", 10, "Show", 110, 9)
+    return new_series.export_json()
 
 # @app.route('/current/', methods=['GET'])
 # def current_song():
