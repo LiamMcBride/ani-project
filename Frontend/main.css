@@ -3,6 +3,7 @@
     --first-gray: #363636;
     --second-gray: #545454;
     --third-gray: #858484;
+    --fourth-gray: #d6d6d6;
     --purple: #BB86FC;
     --text-color: #ffffff;
     --base-opacity: 100%;
@@ -26,7 +27,7 @@ h1, h2, h3, h4{
     font-weight: bolder;
 }
 
-.clickable, button{
+.clickable, button, .settings-links ul li{
     cursor: pointer;
 }
 
@@ -143,25 +144,33 @@ li {
 
 .settings-wrapper{
     display: flex;
+    height: 100%;
+    width: 100%;
 }
 
 .settings-links{
     float:left;
+    border-right: 1px var(--second-gray) solid ;
+    height: 100%;
+    min-width: 20%;
 }
 
 .settings-links ul{
+    display: block;
     list-style-type: none;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     /* display: flex; */
     margin: 0;
-    padding: 15px;
+    padding: 20px 0px;
+    /* padding: 15px; */
     overflow: hidden;
     width: 100%;
 }
 
 .settings-links ul li{
     padding: 5px;
+    /* width: 100%; */
     border-radius: var(--border-radius);
 }
 
@@ -171,3 +180,10 @@ li {
     background-color: var(--second-gray);
 }
 
+.settings{
+    overflow: scroll;
+}
+
+.settings h3{
+    color: var(--fourth-gray);
+}
