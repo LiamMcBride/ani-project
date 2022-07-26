@@ -7,15 +7,40 @@
     <script src="./scripts/login.js" defer></script>
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="./css/card.css">
+    <link rel="stylesheet" type="text/css" href="./css/login.css">
     <link rel="stylesheet" type="text/css" href="./css/progressBar.css">
     <link rel="stylesheet" type="text/css" href="./css/optionsButton.css">
     <title>Ani Project</title>
 </head>
 <body>
     <div class="nav-bar"></div>
-    <div class="settings-page-content-grid">
-        <button onClick="login()" id="login-button">Login</button>
-        <button onClick="logout()" id="logout-button">Logout</button>
+    <div class="content-div">
+        <div class="card login-card">
+            <h1>Login</h1>
+            <div class="text-block">
+                <h3>Not a member? Go ahead and <a href="./signup.html">Sign Up</a></h3>
+            </div>
+            <form id="login-form" >
+                <div class="input-div">
+                    <label>Email:</label>
+                    <input type="text" value="" id="email-input">
+                    <label>Password:</label>
+                    <input type="text" value="" id="password-input">
+                </div>
+                <div class="text-block">
+                    <h3><a href="./signup.html">Forgot Password?</a></h3>
+                </div>
+                <div class="text-block">
+                    <h3>Other issues? Click <a href="./signup.html">here</a> for help.</h3>
+                </div>
+                <div class="button-group login-button-group">
+                    <button class="red-button"><h4>Cancel</h4></button>
+                    <button onClick="login()" id="login-button"><h4>Login</h4></button>
+                </div>
+            </form>
+        </div>
+        <!-- <button onClick="login()" id="login-button">Login</button>
+        <button onClick="logout()" id="logout-button">Logout</button> -->
         
     </div>
     

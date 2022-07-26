@@ -8,6 +8,8 @@ async function login(){
     const token = "1234567890"
 
     localStorage.setItem('token', token);
+
+    location.href = "./index.html";
 }
 
 /*
@@ -38,6 +40,9 @@ async function loginRedirect(){
     console.log(location.pathname)
     if(!validLogin && !location.pathname.includes("login")){
         location.href = "./login.html";
+    }
+    else if(validLogin && location.pathname.includes("login")){
+        location.href = "./index.html";
     }
 
     return null;

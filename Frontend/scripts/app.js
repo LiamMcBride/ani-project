@@ -164,10 +164,10 @@ window.onload = () => {
             login();
         });
 
-        document.getElementById("logout-button").addEventListener('click', (e) => {
-            e.preventDefault();
-            logout();
-        });
+        // document.getElementById("logout-button").addEventListener('click', (e) => {
+        //     e.preventDefault();
+        //     logout();
+        // });
     }
 }
 
