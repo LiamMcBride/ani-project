@@ -4,40 +4,39 @@
     <meta charset="UTF-8">
     <meta name="author" content="ani-project">
     <script src="./scripts/app.js" defer></script>
+    <script src="./scripts/sign-up.js" defer></script>
     <script src="./scripts/login.js" defer></script>
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="./css/card.css">
-    <link rel="stylesheet" type="text/css" href="./css/login.css">
     <link rel="stylesheet" type="text/css" href="./css/progressBar.css">
     <link rel="stylesheet" type="text/css" href="./css/optionsButton.css">
+    <link rel="stylesheet" type="text/css" href="./css/login.css">
     <title>Ani Project</title>
 </head>
 <body>
     <div class="nav-bar"></div>
     <div class="content-div">
         <div class="card login-card">
-            <h1>Login</h1>
+            <h1>Create a new account</h1>
             <div class="text-block">
-                <h3>Not a member? Go ahead and <a href="./sign-up.html">Sign Up</a></h3>
+                <h3>Already a member? Go ahead and <a href="./login.html">Login</a></h3>
             </div>
-            <form id="login-form" >
+            <!-- <form id="login-form" > -->
                 <div class="input-div">
+                    <label>Username:</label>
+                    <input type="text" value="" id="username-input" required>
                     <label>Email:</label>
-                    <input type="text" value="" id="email-input">
+                    <input type="email" name="email" value="" id="email-input" required>
                     <label>Password:</label>
-                    <input type="password" value="" id="password-input">
-                </div>
-                <div class="text-block">
-                    <h3><a href="./signup.html">Forgot Password?</a></h3>
-                </div>
-                <div class="text-block">
-                    <h3>Other issues? Click <a href="./signup.html">here</a> for help.</h3>
+                    <input type="password" value="" id="password-input" required>
+                    <label>Confirm:</label>
+                    <input type="password" value="" id="confirm-input" required>
                 </div>
                 <div class="button-group login-button-group">
                     <button class="red-button"><h4>Cancel</h4></button>
-                    <button onClick="login()" id="login-button"><h4>Login</h4></button>
+                    <button onClick="signup()" id="submit-button" disabled><h4>Login</h4></button>
                 </div>
-            </form>
+            <!-- </form> -->
         </div>
         <!-- <button onClick="login()" id="login-button">Login</button>
         <button onClick="logout()" id="logout-button">Logout</button> -->

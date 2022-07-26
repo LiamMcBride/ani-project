@@ -1,6 +1,22 @@
 // Created by Liam McBride
 // 07/26/2022
 
+function verifyEmail(email, textInput){
+    const valid = email.includes("@");
+
+    if(!valid){
+        textInput.style.validity.badInput = "1px solid red";
+        // textInput.style.border = "1px solid red";
+    }
+    else{
+        textInput.style.border = "1px solid black";
+        textInput.style.outline = "inset 1px";
+    }
+    return valid;
+}
+
+
+
 async function loginRequest(email, password){
     console.log("hello")
     const x = await fetch("http://localhost:105/current-shows/", {
@@ -36,7 +52,7 @@ async function login(){
 
     localStorage.setItem('token', token);
 
-    //location.href = "./index.html";
+    location.href = "./index.html";
 }
 
 /*
@@ -64,11 +80,11 @@ async function isLoggedIn() {
 async function loginRedirect(){
     const validLogin = await isLoggedIn();
     console.log(location.pathname)
-    if(!validLogin && !location.pathname.includes("login")){
+    if(!validLogin && !location.pathname.includes("login") && !location.pathname.includes("sign-up")){
         location.href = "./login.html";
     }
     else if(validLogin && location.pathname.includes("login")){
-        //location.href = "./index.html";
+        location.href = "./index.html";
     }
 
     return null;

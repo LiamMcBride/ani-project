@@ -1,8 +1,9 @@
 import json
-from Series import Series
 
 from flask import Flask, redirect, request, url_for
 from flask_cors import CORS, cross_origin
+
+from Series import Series
 
 app = Flask(__name__)
 
@@ -12,6 +13,17 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 def welcome():
     new_series = Series("Attack on Titan", "Joe Mamma", 10, "Show", 110, 9)
     return new_series.export_json()
+
+@app.route('/sign-up/', methods=['GET', 'POST'])
+def submit():
+    if request.method != 'GET':
+        print("Request recieved")
+        submission = request.get_json(force=True)
+        print(submission)
+        
+        return json.dumps({"message": "success"}), 200
+
+    return "Failed"
 
 # @app.route('/current/', methods=['GET'])
 # def current_song():
