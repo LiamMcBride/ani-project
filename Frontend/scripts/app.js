@@ -154,7 +154,26 @@ function generateOptionsButton(){
 // let showObject = []
 
 // showObject.push(fetchCurrentShows());
-fetchCurrentShows();
+window.onload = () => {
+    
+    loginRedirect();
+    if(document.location.pathname.includes("login")){
+        document.getElementById("login-button").addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log("hi")
+            login();
+        });
+
+        document.getElementById("logout-button").addEventListener('click', (e) => {
+            e.preventDefault();
+            logout();
+        });
+    }
+}
+
+
+
+// fetchCurrentShows();
 
 function genShows(value){
     let showObject = []
