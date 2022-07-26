@@ -1,15 +1,42 @@
 // Created by Liam McBride
 // 07/26/2022
 
+async function loginRequest(email, password){
+    console.log("hello")
+    const x = await fetch("http://localhost:105/current-shows/", {
+        method: "POST",
+        body: JSON.stringify({
+            "email": email,
+            "password": password,
+        }),
+    })
+    .then((response) => {
+        response.json().then((data) => {
+            console.log(data);
+        }
+        );
+    }).catch((error) => {
+        console.log(error);
+    });
+
+    console.log(x)
+    return x;
+}
+
 /*
     Makes fetch call to login endpoint, to initiate or refresh existing token
 */
 async function login(){
     const token = "1234567890"
 
+    const email = document.getElementById("email-input").value;
+    const password = document.getElementById("password-input").value;
+
+    const x = loginRequest(email, password)
+
     localStorage.setItem('token', token);
 
-    location.href = "./index.html";
+    //location.href = "./index.html";
 }
 
 /*
@@ -25,7 +52,6 @@ function logout() {
 */
 async function isLoggedIn() {
     const token = localStorage.getItem('token');
-    console.log(token);
     
     if(token) return true;
     return false;
@@ -42,7 +68,7 @@ async function loginRedirect(){
         location.href = "./login.html";
     }
     else if(validLogin && location.pathname.includes("login")){
-        location.href = "./index.html";
+        //location.href = "./index.html";
     }
 
     return null;

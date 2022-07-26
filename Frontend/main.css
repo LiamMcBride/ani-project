@@ -120,7 +120,7 @@ button:active {
     opacity: var(--base-opacity);
 }
 
-input[type=text]{
+input[type=text], input[type="password"]{
     border-radius: var(--border-radius);
     height: 30px;
     background-color: var(--second-gray);
