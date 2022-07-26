@@ -12,6 +12,8 @@ function searchCall(){
 }
 
 function fetchCurrentShows(){
+    let currentFeed = document.getElementById("current-feed");
+    errorCard ? currentFeed.removeChild(errorCard) : console.log("hi");
     fetch("http://localhost:105/current-shows/")
         .then((response) => {
             response.json().then((value) => {
@@ -22,6 +24,7 @@ function fetchCurrentShows(){
         })
         .catch((error) => {
             console.log(error);
+            generateError();
         })
 }
 
@@ -150,7 +153,22 @@ function generateOptionsButton(){
 
 window.onload = () => loginRedirect();
 
+let errorCard = null;
+
 fetchCurrentShows();
+
+function generateError(){
+    let currentFeed = document.getElementById("current-feed");
+    errorCard = document.createElement("div");
+    errorCard.classList.add("card");
+    errorCard.classList.add("error-card");
+    let errorText = document.createElement("h3");
+    errorText.innerText = "Error Loading: Click to reload";
+
+    errorCard.appendChild(errorText);
+    errorCard.onclick = fetchCurrentShows;
+    currentFeed.appendChild(errorCard);
+}
 
 function genShows(value){
     let showObject = []
