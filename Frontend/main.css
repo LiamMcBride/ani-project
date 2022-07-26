@@ -5,6 +5,7 @@
     --third-gray: #858484;
     --purple: #BB86FC;
     --text-color: #ffffff;
+    --red: #ff5151;
     --base-opacity: 100%;
     --text-opacity: 80%;
     --border-radius: 5px;
@@ -15,6 +16,12 @@ body{
     margin: 0px;
     background-color: var(--black);
     font-family: Arial, Helvetica, sans-serif;
+    height: 85vh;
+}
+
+a {
+    color: var(--purple);
+    text-decoration: none;
 }
 
 h1, h2, h3, h4{
@@ -113,13 +120,21 @@ button:active {
     opacity: var(--base-opacity);
 }
 
-input[type=text]{
+input[type=text], input[type="password"]{
     border-radius: var(--border-radius);
     height: 30px;
+    background-color: var(--second-gray);
+}
+
+#search-input{
     width: 80%;
 }
 
 li {
     margin: 0;
     padding: 0;
+}
+
+.red-button{
+    background-color: var(--red);
 }
