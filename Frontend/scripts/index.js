@@ -154,10 +154,14 @@ fetchCurrentShows();
 
 function genShows(value){
     let showObject = []
-    showObject.push(value);
+    console.log(value)
+    showObject.push(value[0]);
+    showObject.push(value[1])
+
     let currentFeed = document.getElementById("current-feed");
     // currentFeed.appendChild(currentShowCard("blah", 83, 10));
     let shows = generateCurrentShows(showObject);
+    console.log(shows)
     shows.forEach(show => currentFeed.appendChild(show));
     let searchButton = searchBarButton(document);
     searchButton.addEventListener('click', function(e){
