@@ -9,9 +9,17 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/current-shows/', methods=['GET', 'POST'])
-def welcome():
-    new_series = Series("Attack on Titan", "Joe Mamma", 10, "Show", 110, 9)
-    return new_series.export_json()
+def current_shows():
+    
+    new_series = Series("Attack on Titan", "Joe Mamma", 10, "Show", 110, 10)
+    new_series2 = Series("Grand Blue", "I dunno", 10, "Show", 12, 10)
+    
+
+    new_series_array = []
+    new_series_array.append(new_series.export_dict())
+    new_series_array.append(new_series2.export_dict())
+    
+    return json.dumps(new_series_array)
 
 # @app.route('/current/', methods=['GET'])
 # def current_song():
