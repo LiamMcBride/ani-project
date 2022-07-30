@@ -116,6 +116,7 @@ function loadPage(){
         console.log(season.title)
         generateSeason(season, detailsCard)
     });
+
 }
 
 loadPage()

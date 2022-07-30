@@ -12,3 +12,9 @@ function validateDropdown(e){
 
     dropdown.getElementsByClassName("custom-dropdown-contents")[0].style.display = e.path[0].checked ? "block" : "none";
 }
+
+let x = document.getElementsByClassName("custom-episode-dropdown")
+console.log(x)
+for(const drop of x){
+    drop.addEventListener("mouseClick", (Event) => validateDropdown(Event))
+}

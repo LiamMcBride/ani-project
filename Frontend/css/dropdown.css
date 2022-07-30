@@ -44,6 +44,10 @@
     float: none;
 }
 
+.custom-episode-dropdown:hover + div{
+    display: block;
+}
+
 .custom-episode-dropdown label .button-div .divider-line{
     background-color: var(--third-gray);
 }
