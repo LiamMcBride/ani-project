@@ -45,10 +45,16 @@ label{
     text-align: left;
 }
 
-input[type="text"]:focus, input[type="password"]:focus{
-    border: none;
-    /* outline: none !important; */
-    outline: solid 1px var(--purple);
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus{
+    border-color: var(--purple);
+    outline: none !important;
+    /* outline: solid 1px var(--purple); */
+}
+
+input[type="text"]:invalid, input[type="email"]:invalid, input[type="password"]:invalid{
+    border-color: var(--red);
+    outline: none !important;
+    /* outline: solid 1px var(--purple); */
 }
 
 .login-button-group{
@@ -57,4 +63,12 @@ input[type="text"]:focus, input[type="password"]:focus{
     bottom: 5%;
     right: 50%;
     transform: translateX(50%);
+}
+
+#login-button:enabled, #submit-button:enabled{
+    background-color: var(--purple);
+}
+
+#login-button:disabled, #submit-button:disabled{
+    background-color: var(--second-gray);
 }

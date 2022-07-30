@@ -9,6 +9,12 @@
     
 }
 
+.error-card {
+    background-color: var(--red);
+    text-align: center;
+    align-items: center;
+}
+
 .search-card button{
     background-color: var(--purple);
 }

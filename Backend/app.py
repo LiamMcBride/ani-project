@@ -1,8 +1,9 @@
 import json
-from Series import Series
 
 from flask import Flask, redirect, request, url_for
 from flask_cors import CORS, cross_origin
+
+from Series import Series
 
 app = Flask(__name__)
 
@@ -20,6 +21,28 @@ def current_shows():
     new_series_array.append(new_series2.export_dict())
     
     return json.dumps(new_series_array)
+
+@app.route('/sign-up/', methods=['GET', 'POST'])
+def submit():
+    if request.method != 'GET':
+        print("Request recieved")
+        submission = request.get_json(force=True)
+        print(submission)
+        
+        return json.dumps({"message": "success"}), 200
+
+    return "Failed"
+
+@app.route('/sign-up/', methods=['GET', 'POST'])
+def submit():
+    if request.method != 'GET':
+        print("Request recieved")
+        submission = request.get_json(force=True)
+        print(submission)
+        
+        return json.dumps({"message": "success"}), 200
+
+    return "Failed"
 
 # @app.route('/current/', methods=['GET'])
 # def current_song():
