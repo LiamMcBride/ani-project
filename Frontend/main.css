@@ -20,6 +20,10 @@ body{
     height: 85vh;
 }
 
+::selection{
+    background: var(--purple);
+}
+
 a {
     color: var(--purple);
     text-decoration: none;

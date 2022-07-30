@@ -1,18 +1,23 @@
+.custom-dropdown, .custom-episode-dropdown{
+    margin: 20px;
+}
+
+
 .custom-dropdown label .button-div{
     display: flex;
     /* min-width: 100px; */
 }
 
-.custom-dropdown label input{
+.custom-dropdown label input, .custom-episode-dropdown label input{
     display: none;
 }
 
 
-.custom-dropdown{
+.custom-dropdown, .custom-episode-dropdown{
     user-select: none;
 }
 
-.custom-dropdown label .button-div h4{
+.custom-dropdown label .button-div h3{
     display: inline;
     text-align: center;
     float: left;
@@ -22,6 +27,23 @@
 .custom-dropdown label .button-div .vertical-divider-line{
     margin: 0px 10px;
 }
+
+.custom-episode-dropdown label .button-div{
+    width: 30px;
+    height: 30px;    
+    padding: 10px;
+}
+
+.custom-episode-dropdown label .button-div h3{
+    display: block;
+    text-align: center;
+    float: none;
+}
+
+.custom-episode-dropdown label .button-div .divider-line{
+    background-color: var(--third-gray);
+}
+
 
 /* .custom-dropdown */
 
