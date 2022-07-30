@@ -5,6 +5,7 @@
     <meta name="author" content="ani-project">
     <script src="./scripts/login.js" defer></script>
     <script src="./scripts/show.js" defer></script>
+    <script src="./scripts/dropdown.js" defer></script>
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="stylesheet" type="text/css" href="./css/card.css">
     <link rel="stylesheet" type="text/css" href="./css/feed.css">
@@ -12,6 +13,9 @@
     <link rel="stylesheet" type="text/css" href="./css/switch.css">
     <link rel="stylesheet" type="text/css" href="./css/wrappers.css">
     <link rel="stylesheet" type="text/css" href="./css/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="./css/page-content.css">
+    <link rel="stylesheet" type="text/css" href="./css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="./css/slider.css">
 
     <title>Ani Project: </title>
 </head>
@@ -23,7 +27,7 @@
         <div class="feed" id="show-feed">
             <div class="new-card">
                 <div class="title-wrapper">
-                    <h1>Naruto</h1>
+                    <h1 id="show-title">Naruto</h1>
                 </div>
                 <div class="divider-line"></div>
                 <img class="large-show-image" src="Assets/TempAssets/narutocover.png">
@@ -46,7 +50,7 @@
             </div>
         </div>
         <div class="feed" id="show-details-feed">
-            <div class="new-card">
+            <div id="details-card" class="new-card">
                 <div class="title-wrapper">
                     <h1>Naruto</h1>
                 </div>
@@ -54,11 +58,11 @@
                 <div class="sub-title-wrapper">
                     <h1>Description</h1>
                 </div>
-                <p>It is important to take care of the patient, to be followed by the client, but at the same time they will be affected by some great pains and sufferings. For to come to the smallest detail, no one should practice any kind of work unless he derives some benefit from it. Do not be angry with the pain in the rebuke, in the pleasure he wants to be a hair from the pain, let him run away from the pain. Unless they are blinded by lust, they do not come out; they are in fault who abandon their duties and soften their hearts, that is toil.</p>
-                <div class="custom-dropdown-wrapper">
+                <p id="description"></p>
+                <!-- <div id="season-1-dropdown" class="custom-dropdown-wrapper">
                     <div class="custom-dropdown">
                         <label>
-                            <input type="checkbox">
+                            <input type="checkbox" onclick="validateDropdown(event)">
                             <div class="button-div">
                                 <h3>Season 1</h3>
                                 <div class="vertical-divider-line"></div>
@@ -67,18 +71,33 @@
                         </label>
                     </div>
                     <div class="custom-dropdown-contents">
-                        <div class="custom-episode-dropdown">
+                        <div id="episode-1-dropdown" onclick="validateDropdown(event)" class="custom-episode-dropdown">
                             <label>
                                 <input type="checkbox">
                                 <div class="button-div">
                                     <h3>1</h3>
                                     <div class="divider-line"></div>
                                 </div>
-                                <div class="custom-dropdown-contents"></div>
                             </label>
+                            <div class="custom-dropdown-contents">
+                                <div class="episode-rating-div">
+                                    <div class="new-card">
+                                    <input type="range" class="range-slider" min="0" max="10" step="1" value="0">
+                                    <div class="center-text-wrapper">
+                                        <h1 style="color: var(--purple)">1</h1>
+                                    </div>
+                                        <div class="three-button-group">
+                                            <button class="thin-button red-button"><h3>Cancel</h3></button>
+                                            <button class="thin-button"><h3>Page</h3></button>
+                                            <button class="thin-button purple-button"><h3>Submit</h3></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
+                <!-- <div style="height: 800px"></div> -->
             </div>
         </div>
     </div>

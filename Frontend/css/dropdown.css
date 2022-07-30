@@ -2,6 +2,10 @@
     margin: 20px;
 }
 
+.custom-episode-dropdown{
+    position: relative;
+}
+
 
 .custom-dropdown label .button-div{
     display: flex;
@@ -55,3 +59,23 @@
     src: url(../Assets/dropdown-arrow-innactive.svg)
 }
 
+.episode-rating-div{
+    /* transform: translateX(-25%); */
+    left: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.episode-rating-div .new-card{
+    position: static;
+    display: block;
+    width: 300px;
+    padding: 15px;
+    padding-bottom: 10px;
+    margin: 0;
+    background-color: var(--second-gray);
+}
+
+.custom-dropdown-contents{
+    display: none;
+}
