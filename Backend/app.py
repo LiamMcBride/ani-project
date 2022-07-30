@@ -33,17 +33,6 @@ def submit():
 
     return "Failed"
 
-@app.route('/sign-up/', methods=['GET', 'POST'])
-def submit():
-    if request.method != 'GET':
-        print("Request recieved")
-        submission = request.get_json(force=True)
-        print(submission)
-        
-        return json.dumps({"message": "success"}), 200
-
-    return "Failed"
-
 # @app.route('/current/', methods=['GET'])
 # def current_song():
 #     data = SpotifyAPI().getCurrentSongJson()
