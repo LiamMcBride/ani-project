@@ -1,0 +1,15 @@
+.large-show-image{
+    max-height: 300px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.dropdown-arrow{
+    user-select: none;
+
+    margin-top: auto;
+    margin-bottom: auto;
+}

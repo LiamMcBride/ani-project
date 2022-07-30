@@ -1,0 +1,35 @@
+.custom-dropdown label .button-div{
+    display: flex;
+    /* min-width: 100px; */
+}
+
+.custom-dropdown label input{
+    display: none;
+}
+
+
+.custom-dropdown{
+    user-select: none;
+}
+
+.custom-dropdown label .button-div h4{
+    display: inline;
+    text-align: center;
+    float: left;
+    width: 75%;
+}
+
+.custom-dropdown label .button-div .vertical-divider-line{
+    margin: 0px 10px;
+}
+
+/* .custom-dropdown */
+
+.custom-dropdown label input:checked + .button-div .dropdown-arrow{
+    src: url(../Assets/dropdown-arrow.svg)
+}
+
+.custom-dropdown label input + .button-div .dropdown-arrow{
+    src: url(../Assets/dropdown-arrow-innactive.svg)
+}
+
