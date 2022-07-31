@@ -9,3 +9,10 @@ Check out the design here [Figma](https://www.figma.com/file/EN1xpONEXAEhjioGQZ1
     - To install flask run `pip install Flask`
     - Then to install flask_cors run `pip install -U flask-cors`
 -To run flask Backend type `python Backend/app.py`
+
+- Will Notes
+    -Process to pushing a branch:
+        1. git status (to check what branch you are on and if you are up to date on changes)
+        2. git add . (tells computer what files are to be committed)
+        3. git commit -m "" (committing branch changes [save point] and a message of what you changed goes within the quotes)
+        4. 
