@@ -9,6 +9,14 @@
     
 }
 
+.new-card{
+    background-color: var(--first-gray);
+    opacity: var(--base-opacity);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin: 25px 20px;
+}
+
 .error-card {
     background-color: var(--red);
     text-align: center;

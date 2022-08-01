@@ -89,3 +89,5 @@ async function loginRedirect(){
 
     return null;
 }
+
+window.onload = () => loginRedirect();

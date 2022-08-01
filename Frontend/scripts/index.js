@@ -151,7 +151,6 @@ function generateOptionsButton(){
     return document.createElement("div").appendChild(button);
 }
 
-window.onload = () => loginRedirect();
 
 let errorCard = null;
 

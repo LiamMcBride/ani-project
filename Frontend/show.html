@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ani-project">
+    <script src="./scripts/login.js" defer></script>
+    <script src="./scripts/show.js" defer></script>
+    <script src="./scripts/dropdown.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="./css/card.css">
+    <link rel="stylesheet" type="text/css" href="./css/feed.css">
+    <link rel="stylesheet" type="text/css" href="./css/images.css">
+    <link rel="stylesheet" type="text/css" href="./css/switch.css">
+    <link rel="stylesheet" type="text/css" href="./css/wrappers.css">
+    <link rel="stylesheet" type="text/css" href="./css/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="./css/page-content.css">
+    <link rel="stylesheet" type="text/css" href="./css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="./css/slider.css">
+
+    <title>Ani Project: </title>
+</head>
+<body>
+    <div class="nav-bar">
+        <a href="./login.html" onclick="logout()">Logout</a>
+    </div>
+    <div class="show-page-content">
+        <div class="feed" id="show-feed">
+            <div class="new-card">
+                <div class="title-wrapper">
+                    <h1 id="show-title">Naruto</h1>
+                </div>
+                <div class="divider-line"></div>
+                <img class="large-show-image" src="Assets/TempAssets/narutocover.png">
+                <div class="button-group">
+                    <button><h4>List +</h4></button>
+                    <button class="purple-button"><h4>Watchlist +</h4></button>
+                </div>
+                <div class="switch-wrapper">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <div class="slider"></div>
+                    </label>
+                </div>
+                <div class="switch-wrapper">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <div class="slider"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="feed" id="show-details-feed">
+            <div id="details-card" class="new-card">
+                <div class="title-wrapper">
+                    <h1>Naruto</h1>
+                </div>
+                <div class="divider-line"></div>
+                <div class="sub-title-wrapper">
+                    <h1>Description</h1>
+                </div>
+                <p id="description"></p>
+                <!-- <div id="season-1-dropdown" class="custom-dropdown-wrapper">
+                    <div class="custom-dropdown">
+                        <label>
+                            <input type="checkbox" onclick="validateDropdown(event)">
+                            <div class="button-div">
+                                <h3>Season 1</h3>
+                                <div class="vertical-divider-line"></div>
+                                <img class="dropdown-arrow" src="Assets/dropdown-arrow.svg">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="custom-dropdown-contents">
+                        <div class="custom-dropdown-wrapper custom-episode-dropdown-wrapper">
+                            <div id="episode-1-dropdown" onclick="validateDropdown(event)" class="custom-episode-dropdown">
+                                <label>
+                                    <input type="checkbox">
+                                    <div class="button-div">
+                                        <h3>1</h3>
+                                        <div class="divider-line"></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="custom-dropdown-contents">
+                                <div class="episode-rating-div">
+                                    <div class="new-card">
+                                    <input type="range" class="range-slider" min="0" max="10" step="1" value="0">
+                                    <div class="center-text-wrapper">
+                                        <h1 style="color: var(--purple)">1</h1>
+                                    </div>
+                                        <div class="three-button-group">
+                                            <button class="thin-button red-button"><h3>Cancel</h3></button>
+                                            <button class="thin-button"><h3>Page</h3></button>
+                                            <button class="thin-button purple-button"><h3>Submit</h3></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="height: 800px"></div> -->
+            </div>
+        </div>
+    </div>
+</body>
+<footer></footer>
+</html>
