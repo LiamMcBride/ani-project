@@ -181,3 +181,9 @@ li {
 #episode-title{
     color: var(--purple);
 }
+
+.two-column-grid{
+    display: grid;
+    grid-template-columns: 1fr .1fr 1fr;
+    /* column-gap: 20px; */
+}
