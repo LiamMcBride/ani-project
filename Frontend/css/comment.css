@@ -7,6 +7,17 @@
     position: relative;
 }
 
+.comment{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.comment-header{
+    display: grid;
+    grid-template-columns: .08fr 1fr .1fr;
+    grid-gap: 5px;
+}
+
 .comment-divider{
     background-color: var(--first-gray);
     /* width: 85%; */
@@ -46,8 +57,10 @@ input[type=text]{
     position: absolute;
     right: 20px;
     bottom: 20px;
+    vertical-align: middle;
 }
 
-.comment-entry button h3{
-    margin: 0;
+.replies-div{
+    width: 70%;
+    /* float: right; */
 }

@@ -90,3 +90,8 @@
     width: auto;
     height: 100%;
 }
+
+.episode-card{
+    display: grid;
+    grid-template-rows: 50px auto;
+}

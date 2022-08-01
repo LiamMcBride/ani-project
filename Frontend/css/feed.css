@@ -2,3 +2,9 @@
     float: left;
     min-width: 20%;
 }
+
+#show-details-feed{
+    /* overflow: hidden; */
+    height: 4000px;
+    overflow: scroll;
+}

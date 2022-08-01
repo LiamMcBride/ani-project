@@ -13,3 +13,8 @@
     margin-top: auto;
     margin-bottom: auto;
 }
+
+.emoji-image{
+    width: 25px;
+    height: 25px;
+}

@@ -187,3 +187,13 @@ li {
     grid-template-columns: 1fr .1fr 1fr;
     /* column-gap: 20px; */
 }
+
+.emoji-div{
+    border-radius: var(--border-radius);
+    background-color: var(--fourth-gray);
+    display: inline-block;
+    color: var(--black);
+    margin: auto 0;
+    padding-bottom: 5px;
+    height: 25px;
+}
