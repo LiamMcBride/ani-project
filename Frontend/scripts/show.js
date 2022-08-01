@@ -9,153 +9,29 @@ let exampleData = {
             "episodes": [
                 {
                     "title": "Episode_1",
+                    "rating": 8,
                 },
                 {
                     "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_2",
-                },
-            ]
-        },
-        {
-            "title": "Season_2",
-            "episodes": [
-                {
-                    "title": "Episode_1",
-                },
-                {
-                    "title": "Episode_2",
+                    "rating": null,
                 },
                 {
                     "title": "Episode_3",
+                    "rating": null,
                 },
                 {
-                    "title": "Episode_3",
-                },
-            ]
-        },
-        {
-            "title": "Season_2",
-            "episodes": [
-                {
-                    "title": "Episode_1",
+                    "title": "Episode_4",
+                    "rating": null,
                 },
                 {
-                    "title": "Episode_2",
+                    "title": "Episode_5",
+                    "rating": null,
                 },
                 {
-                    "title": "Episode_3",
+                    "title": "Episode_6",
+                    "rating": null,
                 },
-                {
-                    "title": "Episode_3",
-                },
-            ]
-        },
-        {
-            "title": "Season_2",
-            "episodes": [
-                {
-                    "title": "Episode_1",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_3",
-                },
-                {
-                    "title": "Episode_3",
-                },
-            ]
-        },
-        {
-            "title": "Season_2",
-            "episodes": [
-                {
-                    "title": "Episode_1",
-                },
-                {
-                    "title": "Episode_2",
-                },
-                {
-                    "title": "Episode_3",
-                },
-                {
-                    "title": "Episode_3",
-                },
+                
             ]
         },
     ],
@@ -200,36 +76,52 @@ function generateSeason(season, holder){
     `
 
     holder.appendChild(newSeason);
-    console.log(seasonHolder)
 }
 
 function generateEpisode(show){
     return `
-    <div id="${show.title}-dropdown" onclick="validateDropdown(event)" class="custom-episode-dropdown">
+    <div class="custom-dropdown-wrapper custom-episode-dropdown-wrapper">
+    <div id="${show.title}-dropdown" onclick="" class="custom-episode-dropdown">
     <label>
         <input type="checkbox">
         <div class="button-div">
-            <h3>${show.title.slice(-1)}</h3>
-            <div class="divider-line"></div>
+            <h3 ${show.rating ? "class='rated'" : ""}>${show.title.slice(-1)}</h3>
+            <div class="${show.rating ? "rated" : ""} divider-line"></div>
         </div>
     </label>
+    </div>
     <div class="custom-dropdown-contents">
         <div class="episode-rating-div">
             <div class="new-card">
-            <input type="range" class="range-slider" min="0" max="10" step="1" value="0">
+            <input oninput="valueChange(event)" type="range" class="range-slider" min="0" max="10" step="1" value="${show.rating ? show.rating : 0}">
             <div class="center-text-wrapper">
-                <h1 style="color: var(--purple)">1</h1>
+                <h1 style="color: var(--purple)">${show.rating ? show.rating : 0}</h1>
             </div>
                 <div class="three-button-group">
                     <button class="thin-button red-button"><h3>Cancel</h3></button>
                     <button class="thin-button"><h3>Page</h3></button>
-                    <button class="thin-button purple-button"><h3>Submit</h3></button>
+                    <button class="thin-button purple-button" value="${show.title.slice(-1)}" onclick="submitRating(event)"><h3 style="pointer-events: none">Submit</h3></button>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    </div>
 `
+}
+
+function valueChange(e){
+    let text = e.path[1].children[1].children[0];
+    text.innerText = e.target.value;
+}
+
+function submitRating(e){
+    let rating = e.path[2].children[0].value;
+    let name = e.target.value
+    let season = e.path[7].id.slice(0, -9).slice(-1);
+    console.log(exampleData["seasons"][parseInt(season) - 1])
+    exampleData["seasons"][parseInt(season) - 1]["episodes"][parseInt(name) - 1]["rating"] = rating;
+    console.log(name)
+    console.log(rating)
 }
 
 
@@ -242,11 +134,12 @@ function loadPage(){
     const detailsCard = document.getElementById("details-card");
 
     data.seasons.forEach((season) => {
-        console.log(season.title)
         generateSeason(season, detailsCard)
     });
 
 }
+
+
 
 loadPage()
 

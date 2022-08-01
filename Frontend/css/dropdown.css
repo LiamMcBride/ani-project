@@ -45,10 +45,13 @@
     text-align: center;
     float: none;
 }
-
-.custom-episode-dropdown:hover + div{
+/* .custom-episode-dropdown:hover + div,  */
+.custom-episode-dropdown:hover + div,  .custom-dropdown-contents .custom-dropdown-wrapper .custom-dropdown-contents:hover{
     display: inline-block;
 }
+/* .custom-episode-dropdown label input:checked + div{
+    display: none;
+} */
 
 .custom-episode-dropdown label .button-div .divider-line{
     background-color: var(--third-gray);
@@ -70,6 +73,8 @@
     left: 0;
     position: absolute;
     z-index: 1;
+    /* bottom: 0; */
+    top: 70px;
 }
 
 .episode-rating-div .new-card{
@@ -84,4 +89,8 @@
 
 .custom-dropdown-contents{
     display: none;
+}
+
+.rated{
+    color: var(--purple);
 }

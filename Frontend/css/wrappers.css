@@ -11,3 +11,8 @@
 .center-text-wrapper{
     text-align: center;
 }
+
+.custom-episode-dropdown-wrapper{
+    position: relative;
+    display: inline-block;
+}
