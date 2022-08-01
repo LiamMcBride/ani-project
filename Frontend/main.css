@@ -177,3 +177,7 @@ li {
     width: 2px;
     height: 100%;
 }
+
+#episode-title{
+    color: var(--purple);
+}

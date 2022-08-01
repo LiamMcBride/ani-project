@@ -1,3 +1,4 @@
+let page = "Episode"
 
 let exampleData = {
     "title": "Naruto",
@@ -37,6 +38,22 @@ let exampleData = {
     ],
     "settings": {},
 }
+
+let exampleEpisodeData = {
+    "title": "Naruto",
+    "image": "Assets/TempAssets/narutocover.png",
+    "description": "It is important to take care of the patient, to be followed by the client, but at the same time they will be affected by some great pains and sufferings. For to come to the smallest detail, no one should practice any kind of work unless he derives some benefit from it. Do not be angry with the pain in the rebuke, in the pleasure he wants to be a hair from the pain, let him run away from the pain. Unless they are blinded by lust, they do not come out; they are in fault who abandon their duties and soften their hearts, that is toil.",
+    "season": {
+            "title": "Season_1",
+            "episode": {
+                    "title": "Episode_1",
+                    "rating": 8,
+                    "description": "It is important to take care of the patient, to be followed by the client, but at the same time they will be affected by some great pains and sufferings. For to come to the smallest detail, no one should practice any kind of work unless he derives some benefit from it. Do not be angry with the pain in the rebuke, in the pleasure he wants to be a hair from the pain, let him run away from the pain. Unless they are blinded by lust, they do not come out; they are in fault who abandon their duties and soften their hearts, that is toil.",
+                },
+        },
+    "settings": {},
+}
+
 
 function generateSeason(season, holder){
     let newSeason = document.createElement("div");
@@ -126,16 +143,35 @@ function submitRating(e){
 
 
 function loadPage(){
-    const data = exampleData;
-    document.title = "Ani Project: " + data.title;
-    document.getElementById("show-title").innerText = data.title;
-    document.getElementById("description").innerText = data.description;
 
-    const detailsCard = document.getElementById("details-card");
+    if(page === "Series"){
+        const data = exampleData;
+        document.title = `Ani Project: ${data.title}`;
+        document.getElementById("details-card").style.display = "block";
+        document.getElementById("episode-card").style.display = "none";
+        document.getElementById("show-title").innerText = data.title;
+        document.getElementById("description").innerText = data.description;
+        
+        const detailsCard = document.getElementById("details-card");
 
-    data.seasons.forEach((season) => {
-        generateSeason(season, detailsCard)
-    });
+        data.seasons.forEach((season) => {
+            generateSeason(season, detailsCard)
+        });
+    }
+    else{
+        const data = exampleEpisodeData;
+        document.title = `Ani Project: ${data.title} ${data.season.title} ${data.season.episode.title}`;
+        document.getElementById("details-card").style.display = "none";
+        document.getElementById("episode-card").style.display = "block";
+        document.getElementById("show-title").innerText = data.title;
+        document.getElementById("episode-title").innerText = data.title;
+        document.getElementById("episode-description").innerText = data.season.episode.description
+        document.getElementById("season-episode-title").innerText = `${data.season.title}: ${data.season.episode.title}`;
+
+    }
+
+
+    
 
 }
 
