@@ -146,7 +146,7 @@ function loadPage(){
 
     if(page === "Series"){
         const data = exampleData;
-        document.title = `Ani Project: ${data.title}`;
+        document.title = `Stat Binge: ${data.title}`;
         document.getElementById("details-card").style.display = "block";
         document.getElementById("episode-card").style.display = "none";
         document.getElementById("show-title").innerText = data.title;
@@ -160,7 +160,7 @@ function loadPage(){
     }
     else{
         const data = exampleEpisodeData;
-        document.title = `Ani Project: ${data.title} ${data.season.title} ${data.season.episode.title}`;
+        document.title = `Stat Binge: ${data.title} ${data.season.title} ${data.season.episode.title}`;
         document.getElementById("details-card").style.display = "none";
         document.getElementById("episode-card").style.display = "block";
         document.getElementById("show-title").innerText = data.title;

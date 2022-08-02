@@ -1,0 +1,15 @@
+<svg width="300" height="328" viewBox="0 0 300 328" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15 128C6.7157 128 0 134.716 0 143V313C0 321.284 6.7157 328 15 328H285C293.284 328 300 321.284 300 313V143C300 134.716 293.284 128 285 128H15ZM53 153C44.7157 153 38 159.716 38 168V287C38 295.284 44.7157 302 53 302H246.5C254.784 302 261.5 295.284 261.5 287V168C261.5 159.716 254.784 153 246.5 153H53Z" fill="#BB86FC"/>
+<rect x="182.352" y="6" width="5" height="125" transform="rotate(15 182.352 6)" fill="#BB86FC"/>
+<rect x="113" y="7.29395" width="5" height="125" transform="rotate(-15 113 7.29395)" fill="#BB86FC"/>
+<ellipse cx="149.5" cy="128" rx="41.5" ry="25" fill="#BB86FC"/>
+<circle cx="116.5" cy="8.5" r="8.5" fill="#BB86FC"/>
+<circle cx="183.5" cy="8.5" r="8.5" fill="#BB86FC"/>
+<rect x="56" y="255" width="20" height="42" fill="#BB86FC"/>
+<rect x="84" y="216" width="20" height="81" fill="#BB86FC"/>
+<rect x="112" y="179" width="20" height="118" fill="#BB86FC"/>
+<rect x="140" y="247" width="20" height="50" fill="#BB86FC"/>
+<rect x="168" y="225" width="20" height="72" fill="#BB86FC"/>
+<rect x="196" y="278" width="20" height="19" fill="#BB86FC"/>
+<rect x="224" y="261" width="20" height="36" fill="#BB86FC"/>
+</svg>

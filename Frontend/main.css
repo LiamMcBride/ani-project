@@ -8,7 +8,7 @@
     --text-color: #ffffff;
     --red: #ff5151;
     --base-opacity: 100%;
-    --text-opacity: 80%;
+    --text-opacity: 100%;
     --border-radius: 5px;
 }
 
@@ -136,7 +136,9 @@ button:active, .button-div:active{
 }
 
 .nav-bar{
-    height: 5vh;
+    /* height: 8vh; */
+    /* height: 70px; */
+    padding: 10px;
     width: 100%;
     background-color: var(--first-gray);
     opacity: var(--base-opacity);
