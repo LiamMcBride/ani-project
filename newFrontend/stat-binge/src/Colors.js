@@ -5,3 +5,4 @@ export const fourthGray = "#d6d6d6";
 export const purple = "#bb86fc";
 export const red = "#ff5151";
 export const black = "#121212";
+export const textColor = "#ffffff";
