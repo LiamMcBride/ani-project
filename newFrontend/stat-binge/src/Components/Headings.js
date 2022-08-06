@@ -8,9 +8,8 @@ const heading2Style = {
     "font-weight": "bolder",
 }
 
-export function Heading2(){
-    console.log(this.props)
+export function Heading2(props){
     return(
-        <h1 style={heading2Style}>{this.props.text}</h1>
+        <h1 style={heading2Style}>{props.text}</h1>
     );
 }

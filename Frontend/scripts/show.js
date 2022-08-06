@@ -1,4 +1,4 @@
-let page = "Episode"
+let page = "Series"
 
 let exampleData = {
     "title": "Naruto",

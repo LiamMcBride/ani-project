@@ -1,0 +1,7 @@
+button:hover, .button-div:hover{
+    background-color: var(--first-gray);
+}
+
+button:active, .button-div:active{
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
