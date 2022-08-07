@@ -3,12 +3,12 @@ import { firstGray } from '../Colors';
 const navBarStyle = {
     "width": "100%",
     "height": "50px",
-    "background-color": firstGray,
+    "backgroundColor": firstGray,
 }
 
 
 export function NavBar() {
   return (
-    <div class={"nav-bar"} style={navBarStyle}></div>
+    <div className={"nav-bar"} style={navBarStyle}></div>
   );
 }

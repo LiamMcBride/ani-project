@@ -1,18 +1,18 @@
 import { firstGray } from "../Colors";
 
 const cardStyle = {
-    "background-color": firstGray,
-    "min-height": "35px",
-    "max-height": "200px",
-    "border-radius": "5px",
+    "backgroundColor": firstGray,
+    "minHeight": "35px",
+    "maxHeight": "200px",
+    "borderRadius": "2px",
     "padding": "20px",
-    "margin": "10px",
+    // "margin": "10px",
 }
 
 
 export function Card(props) {
   return (
-    <div class={"nav-bar"} style={cardStyle}>
+    <div className={"nav-bar"} style={cardStyle}>
       {props.children}
     </div>
   );

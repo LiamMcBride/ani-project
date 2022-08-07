@@ -1,5 +1,6 @@
 import { secondGray } from "../Colors";
 
+
 const buttonStyle = {
     "borderRadius": "5px",
     "padding": "10px",
@@ -21,9 +22,9 @@ const buttonGroupStyle = {
 
 
 export function Button(props){
-
+    const style = {"backgroundColor": secondGray}
     return (
-        <button>
+        <button onclick={console.log("hi")}>
             <h4>{props.children}</h4>
         </button>
     );

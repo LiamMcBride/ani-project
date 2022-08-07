@@ -2,15 +2,14 @@
 
 let feedStyle = {
     "overflow": "scroll",
+    "height": "100%",
 }
 
 export function Feed(props){
 
-    feedStyle["height"] = "100%";
-
     return (
         <div style={feedStyle}>
-            {props.children}
+            {props.children ? props.children : null}
         </div>
     );
 }
