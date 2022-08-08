@@ -1,7 +1,7 @@
 
 
 let feedStyle = {
-    "overflow": "scroll",
+    "overflow": "hidden",
     "height": "100%",
 }
 

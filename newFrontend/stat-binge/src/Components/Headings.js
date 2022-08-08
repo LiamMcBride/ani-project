@@ -16,3 +16,20 @@ export function Heading2(props){
         <h1 style={props.align ? heading2Style(props.align) : heading2Style()}>{props.children}</h1>
     );
 }
+
+let heading3Style = (align = "center", color) => {
+    return {
+        "color": color,
+        "margin": "auto 5px",
+        "padding": "0",
+        "fontSize": "20px",
+        "fontWeight": "bold",
+        "textAlign": align,
+    }
+}
+
+export function Heading3(props){
+    return(
+        <h2 style={props.align ? heading3Style(props.align, props.color) : heading3Style("center", props.color)}>{props.children}</h2>
+    );
+}

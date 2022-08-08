@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { purple, secondGray } from "../Colors";
 import { RatingCanvas } from "./CanvasElements";
-import { Heading2 } from "./Headings";
+import { Heading2, Heading3 } from "./Headings";
 import { IconImage } from "./Image";
 import { SettingsButton } from "./Settings";
 
@@ -23,8 +24,7 @@ const testDivStyle = {
 
 export function FeedComment(props){
     const data = props.data;
-    const [score, setScore] = useState(1.35);
-    const slider = <input id={"scoreSlider"} type={"range"} max={2} min={0} step={.05} onChange={() => setScore(document.getElementById("scoreSlider").value)}></input>;
+    const [score, setScore] = useState(9);
 
     return (
         <div>
@@ -33,9 +33,13 @@ export function FeedComment(props){
                 <Heading2 align="left">{data?.username}</Heading2>
                 <SettingsButton></SettingsButton>
             </div>
-            <RatingCanvas value={score}></RatingCanvas>
-            {slider}
-            <h1 style={{"color": "red"}}>{score}</h1>
+            <div style={{"margin": "10px 0 0 0"}}>
+                <RatingCanvas value={score / 5}></RatingCanvas>
+                <Heading3 align={"left"} color={purple}>{score + "/10"}</Heading3>
+            </div>
+            <div style={{"textAlign": "left", "margin": "0", "color": secondGray}}>
+                <h4 syle={{"fontSize": "15px", "fontWeight": "normal", "textAlign": "left",}}>Commented on S1 Ep3</h4>
+            </div>
         </div>
     );
 }
