@@ -8,7 +8,7 @@ import { HorizontalDividerLine } from "../Components/LineDivider";
 const mainPageStyle = {
   "backgroundColor": black,
   "display": "grid",
-  "gridTemplateColumns": "1fr 1fr .5fr",
+  "gridTemplateColumns": ".5fr 1fr .5fr",
   "gridGap": "15px",
   // "width": "100%",
   "padding": "15px",

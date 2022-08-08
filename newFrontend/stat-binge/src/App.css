@@ -1,6 +1,7 @@
 body{
   overflow: hidden;
   max-height: 100vh;
+  /* color: rgba(108, 108, 108, 0.863) */
 }
 
 .App {
