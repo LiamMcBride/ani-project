@@ -1,4 +1,4 @@
-import { secondGray } from "../Colors";
+import { firstGray, purple, secondGray, textColor } from "../Colors";
 
 
 const buttonStyle = {
@@ -16,6 +16,31 @@ const buttonGroupStyle = {
     "gridTemplateColumns": "1fr 1fr",
     "width": "100%",
     "gridGap": "25px",
+}
+
+const emojiButtonStyle = {
+    "height": "30px",
+    "width": "30px",
+    "backgroundColor": "transparent",
+    "border": "none",
+    "textAlign": "center",
+    "alignItems": "center",
+    "float": "left",
+    // "backgroundImage": require("./Emoji.png"),
+}
+
+const reactionButtonStyle = {
+    "height": "25px",
+    "width": "40px",
+    "backgroundColor": purple,
+    "border": "none",
+    "textAlign": "center",
+    "alignItems": "center",
+    "float": "left",
+    "lineHeight": "25px",
+    "borderRadius": "5px",
+    "boxShadow": `inset 1px 1px 1px 1px ${firstGray}`,
+    "margin": "0 10px",
 }
 
 
@@ -36,5 +61,34 @@ export function ButtonGroup(props){
         <div style={buttonGroupStyle}>
             {props.children}
         </div>
+    );
+}
+
+export function EmojiButton(props){
+    return (
+        <button style={emojiButtonStyle}>
+            <img  src={require("./Emoji.png")}></img>
+        </button>
+    );
+}
+
+export function ReactionButton(props){
+    return (
+        <div style={reactionButtonStyle}>
+            👍4
+        </div>
+    );
+}
+
+export function ReplyButton(props){
+    const style = {
+        "color": textColor,
+        "fontSize": "15px",
+        "display": "inline",
+        "margin": "0 10px",
+    }
+
+    return (
+        <p style={style}>Reply</p>
     );
 }

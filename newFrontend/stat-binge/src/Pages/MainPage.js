@@ -8,11 +8,31 @@ import { HorizontalDividerLine } from "../Components/LineDivider";
 const mainPageStyle = {
   "backgroundColor": black,
   "display": "grid",
-  "gridTemplateColumns": "1fr 1fr 1fr",
+  "gridTemplateColumns": "1fr 1fr .5fr",
   "gridGap": "15px",
   // "width": "100%",
   "padding": "15px",
   // "height": "100vh",
+}
+
+const testComment = {
+  "username": "DBauc",
+  "icon":"./realavatar.jpg",
+  "rating": 8,
+  "episode": "S2 Ep3",
+  "seen": true,
+  "comment": "Really enjoyed this one! Don’t know why they be spending literal hours on backgrounds...",
+  "timestamp": "6 hours",
+}
+
+const testComment2 = {
+  "username": "WHager",
+  "icon":"./realavatar.jpg",
+  "rating": 3,
+  "episode": "S5 Ep1",
+  "seen": false,
+  "comment": "Honestly mid as hell",
+  "timestamp": "2 days",
 }
 
 export function MainPage() {
@@ -38,7 +58,17 @@ export function MainPage() {
         <Heading2 align="left">Friend feed</Heading2>
         <HorizontalDividerLine />
         <Feed>
-          <FeedComment data={{"username": "DBauc", "icon":"./realavatar.jpg", "rating": 8, "seen": true,}}></FeedComment>
+          <FeedComment data={testComment}></FeedComment>
+          <HorizontalDividerLine></HorizontalDividerLine>
+          <FeedComment data={testComment2}></FeedComment>
+          <HorizontalDividerLine></HorizontalDividerLine>
+          <FeedComment data={testComment2}></FeedComment>
+          <HorizontalDividerLine></HorizontalDividerLine>
+          <FeedComment data={testComment2}></FeedComment>
+          <HorizontalDividerLine></HorizontalDividerLine>
+          <FeedComment data={testComment2}></FeedComment>
+          <HorizontalDividerLine></HorizontalDividerLine>
+          <FeedComment data={testComment2}></FeedComment>
         </Feed>
       </Card>
     </div>

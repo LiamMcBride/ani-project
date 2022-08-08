@@ -1,8 +1,8 @@
 
 
 let feedStyle = {
-    "overflow": "hidden",
     "height": "100%",
+    "overflow": "scroll",
 }
 
 export function Feed(props){

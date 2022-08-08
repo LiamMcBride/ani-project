@@ -3,9 +3,10 @@ import { firstGray } from "../Colors";
 const cardStyle = {
     "backgroundColor": firstGray,
     "minHeight": "35px",
-    "maxHeight": "200px",
+    "maxHeight": "85vh",
     "borderRadius": "2px",
     "padding": "20px",
+    "overflow": "hidden",
     // "margin": "10px",
 }
 
