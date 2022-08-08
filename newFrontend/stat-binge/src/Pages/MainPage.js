@@ -38,7 +38,7 @@ export function MainPage() {
         <Heading2 align="left">Friend feed</Heading2>
         <HorizontalDividerLine />
         <Feed>
-          <FeedComment data={{"username": "DBauc", "icon":"./realavatar.jpg"}}></FeedComment>
+          <FeedComment data={{"username": "DBauc", "icon":"./realavatar.jpg", "rating": 8, "seen": true,}}></FeedComment>
         </Feed>
       </Card>
     </div>

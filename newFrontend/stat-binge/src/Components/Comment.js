@@ -1,9 +1,9 @@
-import { useState } from "react";
 import { purple, secondGray } from "../Colors";
 import { RatingCanvas } from "./CanvasElements";
 import { Heading2, Heading3 } from "./Headings";
 import { IconImage } from "./Image";
 import { SettingsButton } from "./Settings";
+import { SeenTag } from "./SpecialText";
 
 const feedCommentStyle = {
 
@@ -24,7 +24,7 @@ const testDivStyle = {
 
 export function FeedComment(props){
     const data = props.data;
-    const [score, setScore] = useState(9);
+    const score = data.rating;
 
     return (
         <div>
@@ -38,7 +38,7 @@ export function FeedComment(props){
                 <Heading3 align={"left"} color={purple}>{score + "/10"}</Heading3>
             </div>
             <div style={{"textAlign": "left", "margin": "0", "color": secondGray}}>
-                <h4 syle={{"fontSize": "15px", "fontWeight": "normal", "textAlign": "left",}}>Commented on S1 Ep3</h4>
+                <h4 syle={{"display": "inline", "fontSize": "15px", "fontWeight": "normal", "textAlign": "left",}}>Commented on S1 Ep3 | <SeenTag seen={data.seen}></SeenTag></h4>
             </div>
         </div>
     );
