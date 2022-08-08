@@ -8,6 +8,7 @@ let heading2Style = (align = "center") => {
         "fontSize": "20px",
         "fontWeight": "bolder",
         "textAlign": align,
+        // "display": "inline",
     }
 }
 

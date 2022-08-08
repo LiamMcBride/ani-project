@@ -1,3 +1,18 @@
+:root{
+  --black: #121212;
+  --first-gray: #363636;
+  --second-gray: #545454;
+  --third-gray: #858484;
+  --fourth-gray: #d6d6d6;
+  --purple: #BB86FC;
+  --text-color: #ffffff;
+  --red: #ff5151;
+  --base-opacity: 100%;
+  --text-opacity: 100%;
+  --border-radius: 5px;
+}
+
+
 body{
   overflow: hidden;
   max-height: 100vh;

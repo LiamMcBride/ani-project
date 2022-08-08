@@ -1,4 +1,7 @@
 import { firstGray } from "../Colors";
+import { Feed } from "./Feed";
+import { Heading2 } from "./Headings";
+import { HorizontalDividerLine } from "./LineDivider";
 
 const cardStyle = {
     "backgroundColor": firstGray,
@@ -23,6 +26,20 @@ export function ShowCard(props){
   return (
     <Card>
       {props.children}
+    </Card>
+  );
+}
+
+export function RecommendationCard(props) {
+
+
+  return (
+    <Card>
+      <Heading2 align="left">Search</Heading2>
+      <HorizontalDividerLine></HorizontalDividerLine>
+      <Feed>
+        
+      </Feed>
     </Card>
   );
 }
