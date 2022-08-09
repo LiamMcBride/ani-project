@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { black } from "../Colors";
-import { Card, RecommendationCard } from "../Components/Card";
+import { Card, RecommendationCard, SearchCard } from "../Components/Card";
 import { FeedComment } from "../Components/Comment";
 import { Feed } from "../Components/Feed";
 import { Heading2 } from "../Components/Headings";
 import { HorizontalDividerLine } from "../Components/LineDivider";
-import { Switch } from "../Components/Toggle";
 
 const mainPageStyle = {
   "backgroundColor": black,
@@ -41,7 +40,7 @@ const testComment2 = {
 
 export function MainPage() {
 
-  const [advancedSearch, setAdvancedSearch] = useState(true);
+  const [advancedSearch, setAdvancedSearch] = useState(false);
 
   const handleAdvancedSearch = () => {
     setAdvancedSearch(!advancedSearch);
@@ -59,14 +58,15 @@ export function MainPage() {
         </Feed>
       </Card>
       <div>
-      <Card height={"20vh"}>
+      {<SearchCard advancedSearch={advancedSearch} handleChange={handleAdvancedSearch}></SearchCard>
+      /* <Card height={"20vh"}>
       <Heading2 align="left">Search</Heading2>
       <Switch handleChange={handleAdvancedSearch}></Switch>
         <HorizontalDividerLine />
         <Feed className={"search-feed"}>
           hi
         </Feed>
-      </Card>
+      </Card> */}
       <div style={{"height": "15px", "width": "10px"}}></div>
       <Card>
         <Heading2 align="left">Recommended</Heading2>

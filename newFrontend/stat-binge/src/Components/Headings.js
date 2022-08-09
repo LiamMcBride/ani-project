@@ -1,6 +1,6 @@
 import { textColor } from "../Colors";
 
-let heading2Style = (align = "center") => {
+let heading2Style = (align = "center", display = "block") => {
     return {
         "color": textColor,
         "margin": "auto 5px",
@@ -8,13 +8,13 @@ let heading2Style = (align = "center") => {
         "fontSize": "20px",
         "fontWeight": "bolder",
         "textAlign": align,
-        // "display": "inline",
+        "display": display,
     }
 }
 
 export function Heading2(props){
     return(
-        <h1 style={props.align ? heading2Style(props.align) : heading2Style()}>{props.children}</h1>
+        <h1 style={heading2Style(props?.align, props?.display)}>{props.children}</h1>
     );
 }
 

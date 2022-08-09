@@ -49,18 +49,30 @@ export function RecommendationCard(props) {
 }
 
 export function SearchCard(props){
-  if(props.advancedSearch){
-    return (null);
+
+  const innerValue = () => {
+    if(props.advancedSearch){
+      return (
+        <Feed className="search-feed">
+          advanced
+        </Feed>
+      );
+    }
+    return (
+      <Feed className="search-feed">
+        lame
+      </Feed>
+    );
   }
 
   return (
     <Card height={"20vh"}>
-      <Heading2 align="left">Search</Heading2>
-      <Switch handleChange={props.handleChange}></Switch>
+      <div style={{"position": "relative", "textAlign": "left"}}>
+        <Heading2 display="inline-block" align="left">{props.advancedSearch ? "Advanced Search" : "Search"}</Heading2>
+        <Switch right={true} handleChange={props.handleChange}></Switch>
+      </div>
       <HorizontalDividerLine></HorizontalDividerLine>
-      <Feed className="search-feed">
-        hi
-      </Feed>
+      {innerValue()}
     </Card>
   );
 }
