@@ -1,5 +1,5 @@
-import { firstGray } from "../Colors";
-import { Feed } from "./Feed";
+import { firstGray, textColor } from "../Colors";
+import { Feed, SideFeed } from "./Feed";
 import { Heading2 } from "./Headings";
 import { HorizontalDividerLine } from "./LineDivider";
 import { Switch } from "./Toggle";
@@ -35,16 +35,134 @@ export function ShowCard(props){
 }
 
 export function RecommendationCard(props) {
-
+  const testStyle = {
+    "height": "175px",
+    "width": "100px",
+    "backgroundColor": "red",
+    "margin": "0 20px",
+    "display": "inline-block",
+  }
 
   return (
-    <Card>
-      <Heading2 align="left">Search</Heading2>
+    <Card height={"60vh"}>
+      <div style={{"position": "relative", "textAlign": "left"}}>
+        <Heading2 display="inline-block" align="left">Recommendations</Heading2>
+        <Switch right={true} handleChange={props.handleChange}></Switch>
+      </div>
       <HorizontalDividerLine></HorizontalDividerLine>
-      <Feed>
-        
+      <Feed className="search-feed">
+        <h3 style={{"margin": "0", "color": textColor, "margin-bottom": "15px"}} align="left">Developers Picks</h3>
+          <SideFeed>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+          </SideFeed>
+        <h3 style={{"margin": "0", "color": textColor, "margin-bottom": "15px"}} align="left">Based on Your Favorites</h3>
+          <SideFeed>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+          </SideFeed>
+        <h3 style={{"margin": "0", "color": textColor, "margin-bottom": "15px"}} align="left">Up and Comers</h3>
+          <SideFeed>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+          </SideFeed>
+        <h3 style={{"margin": "0", "color": textColor, "margin-bottom": "15px"}} align="left">Top 2022 Shows</h3>
+          <SideFeed>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+          </SideFeed>
+        <h3 style={{"margin": "0", "color": textColor, "margin-bottom": "15px"}} align="left">Top Ranked Shows</h3>
+          <SideFeed>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+            <div style={testStyle}></div>
+          </SideFeed>
       </Feed>
-    </Card>
+  </Card>
   );
 }
 

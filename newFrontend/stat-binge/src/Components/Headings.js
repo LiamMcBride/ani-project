@@ -3,7 +3,7 @@ import { textColor } from "../Colors";
 let heading2Style = (align = "center", display = "block") => {
     return {
         "color": textColor,
-        "margin": "auto 5px",
+        "margin": "auto 0",
         "padding": "0",
         "fontSize": "20px",
         "fontWeight": "bolder",

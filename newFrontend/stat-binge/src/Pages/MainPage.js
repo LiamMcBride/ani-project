@@ -58,23 +58,9 @@ export function MainPage() {
         </Feed>
       </Card>
       <div>
-      {<SearchCard advancedSearch={advancedSearch} handleChange={handleAdvancedSearch}></SearchCard>
-      /* <Card height={"20vh"}>
-      <Heading2 align="left">Search</Heading2>
-      <Switch handleChange={handleAdvancedSearch}></Switch>
-        <HorizontalDividerLine />
-        <Feed className={"search-feed"}>
-          hi
-        </Feed>
-      </Card> */}
+      <SearchCard advancedSearch={advancedSearch} handleChange={handleAdvancedSearch}></SearchCard>
       <div style={{"height": "15px", "width": "10px"}}></div>
-      <Card>
-        <Heading2 align="left">Recommended</Heading2>
-        <HorizontalDividerLine></HorizontalDividerLine>
-        <Feed className={"recommendation-feed"}>
-          <RecommendationCard></RecommendationCard>
-        </Feed>
-      </Card>
+      <RecommendationCard></RecommendationCard>
       </div>
       {/* {advancedSearch ? <RecommendationCard></RecommendationCard> : null} */}
       <Card>

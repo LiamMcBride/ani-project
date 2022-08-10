@@ -15,3 +15,19 @@ export function Feed(props){
         </div>
     );
 }
+
+export function SideFeed(props){
+    const style = {
+        "height": "225px",
+        "whiteSpace": "nowrap",
+        "overflow-y": "hidden",
+        "overflow-x": "auto",
+        "width": "675px",
+    }
+
+    return (
+        <div style={style}>
+            {props?.children}
+        </div>
+    );
+}
