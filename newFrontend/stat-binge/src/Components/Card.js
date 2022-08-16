@@ -51,7 +51,7 @@ export function RecommendationCard(props) {
       </div>
       <HorizontalDividerLine></HorizontalDividerLine>
       <Feed className="search-feed">
-        <h3 style={{"margin": "0", "color": textColor, "margin-bottom": "15px"}} align="left">Developers Picks</h3>
+        <h3 style={{"margin": "0", "color": textColor, "marginBottom": "15px"}} align="left">Developers Picks</h3>
           <SideFeed>
             <div style={testStyle}></div>
             <div style={testStyle}></div>
@@ -73,7 +73,7 @@ export function RecommendationCard(props) {
             <div style={testStyle}></div>
             <div style={testStyle}></div>
           </SideFeed>
-        <h3 style={{"margin": "0", "color": textColor, "margin-bottom": "15px"}} align="left">Based on Your Favorites</h3>
+        <h3 style={{"margin": "0", "color": textColor, "marginBottom": "15px"}} align="left">Based on Your Favorites</h3>
           <SideFeed>
             <div style={testStyle}></div>
             <div style={testStyle}></div>
@@ -95,7 +95,7 @@ export function RecommendationCard(props) {
             <div style={testStyle}></div>
             <div style={testStyle}></div>
           </SideFeed>
-        <h3 style={{"margin": "0", "color": textColor, "margin-bottom": "15px"}} align="left">Up and Comers</h3>
+        <h3 style={{"margin": "0", "color": textColor, "marginBottom": "15px"}} align="left">Up and Comers</h3>
           <SideFeed>
             <div style={testStyle}></div>
             <div style={testStyle}></div>
@@ -117,7 +117,7 @@ export function RecommendationCard(props) {
             <div style={testStyle}></div>
             <div style={testStyle}></div>
           </SideFeed>
-        <h3 style={{"margin": "0", "color": textColor, "margin-bottom": "15px"}} align="left">Top 2022 Shows</h3>
+        <h3 style={{"margin": "0", "color": textColor, "marginBottom": "15px"}} align="left">Top 2022 Shows</h3>
           <SideFeed>
             <div style={testStyle}></div>
             <div style={testStyle}></div>
@@ -139,7 +139,7 @@ export function RecommendationCard(props) {
             <div style={testStyle}></div>
             <div style={testStyle}></div>
           </SideFeed>
-        <h3 style={{"margin": "0", "color": textColor, "margin-bottom": "15px"}} align="left">Top Ranked Shows</h3>
+        <h3 style={{"margin": "0", "color": textColor, "marginBottom": "15px"}} align="left">Top Ranked Shows</h3>
           <SideFeed>
             <div style={testStyle}></div>
             <div style={testStyle}></div>

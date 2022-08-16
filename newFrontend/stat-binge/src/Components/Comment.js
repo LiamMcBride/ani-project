@@ -14,6 +14,7 @@ const feedCommentStyle = {
 const topRowStyle = {
     "display": "grid",
     "gridTemplateColumns": "50px 1fr 50px",
+    "gridGap": "10px",
 }
 
 const testDivStyle = {
@@ -27,6 +28,7 @@ const testDivStyle = {
 export function FeedComment(props){
     const data = props.data;
     const score = data.rating;
+    let hide = !data.seen;
 
     return (
         <div stlye={{"margin": "10px 0"}}>
@@ -42,7 +44,7 @@ export function FeedComment(props){
             <div style={{"textAlign": "left", "margin": "0", "color": secondGray}}>
                 <h4 syle={{"display": "inline", "fontSize": "15px", "fontWeight": "normal", "textAlign": "left",}}>Commented on {data.episode} | <SeenTag seen={data.seen}></SeenTag></h4>
             </div>
-            <CommentText hide={!data.seen}>{data.comment}</CommentText>
+            <CommentText hide={hide} handleClick={() => hide = true}>{data.comment}</CommentText>
             <div style={{"margin": "10px 0", "textAlign": "left", "color": secondGray}}>
                 <EmojiButton></EmojiButton>
                 <ReactionButton></ReactionButton>

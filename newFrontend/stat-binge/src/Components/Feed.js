@@ -20,8 +20,8 @@ export function SideFeed(props){
     const style = {
         "height": "225px",
         "whiteSpace": "nowrap",
-        "overflow-y": "hidden",
-        "overflow-x": "auto",
+        "overflowY": "hidden",
+        "overflowX": "auto",
         "width": "675px",
     }
 

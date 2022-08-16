@@ -9,8 +9,8 @@ const commentTextStyle = {
 }
 
 export function CommentText(props){
-    const blurryDivStyle = (on) => {
-        return {
+    const blurryDivStyle = {
+        
             "height": "100%",
             "width": "100%",
             "backgroundColor": "rgba(108, 108, 108, 1)",
@@ -18,16 +18,24 @@ export function CommentText(props){
             "top": "0",
             "left": "0",
             "filter": "blur(3px)",
-            "display": on ? "block" : "none",
-        }
+            // "display": props.hide ? "block" : "none",
+        
+    }
+
+    const buttonStyle = {
+        "zIndex": "1",
+        "position": "absolute",
+        "top": "50%",
+        "left": "50%",
+        "transform": "translate(-25%, -25%)",
+        "display": props.hide ? "block" : "none",
     }
 
     return (
         <div style={{"position": "relative"}}>
             <p style={commentTextStyle}>{props.children}</p>
-            <div style={blurryDivStyle(props.hide)}>
-                <button style={{"zIndex": "1"}}>View</button>
-            </div>
+            {props.hide ? <div style={blurryDivStyle}></div> : null}
+            {props.hide ? <button style={buttonStyle} onClick={props.handleClick}>View</button> : null}
         </div>
     );
 }
