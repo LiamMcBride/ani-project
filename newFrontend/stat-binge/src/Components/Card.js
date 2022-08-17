@@ -44,7 +44,7 @@ export function RecommendationCard(props) {
   }
 
   return (
-    <Card height={"60vh"}>
+    <Card height={"none"}>
       <div style={{"position": "relative", "textAlign": "left"}}>
         <Heading2 display="inline-block" align="left">Recommendations</Heading2>
         <Switch right={true} handleChange={props.handleChange}></Switch>
@@ -184,7 +184,7 @@ export function SearchCard(props){
   }
 
   return (
-    <Card height={"20vh"}>
+    <Card height={"none"}>
       <div style={{"position": "relative", "textAlign": "left"}}>
         <Heading2 display="inline-block" align="left">{props.advancedSearch ? "Advanced Search" : "Search"}</Heading2>
         <Switch right={true} handleChange={props.handleChange}></Switch>

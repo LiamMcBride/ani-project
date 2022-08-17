@@ -10,7 +10,7 @@ const mainPageStyle = {
   "backgroundColor": black,
   "display": "grid",
   "gridTemplateColumns": ".5fr 1fr .5fr",
-  "gridTemplateRows": "1fr 1fr",
+  // "gridTemplateRows": "1fr 1fr",
   "gridArea": "current-feed search-feed friend-feed\ncurrent-feed recommendation-feed friend-feed",
   "gridGap": "15px",
   // "width": "100%",
@@ -47,6 +47,10 @@ export function MainPage() {
     console.log(advancedSearch)
   }
 
+  const randomDivStyle = {
+    "height": "400px",
+  }
+
   return (
     <div style={mainPageStyle}>
       <Card>
@@ -57,11 +61,13 @@ export function MainPage() {
           hi
         </Feed>
       </Card>
-      <div>
+      {/* <div style={randomDivStyle}> */}
+      <div style={randomDivStyle}>
       <SearchCard advancedSearch={advancedSearch} handleChange={handleAdvancedSearch}></SearchCard>
       <div style={{"height": "15px", "width": "10px"}}></div>
       <RecommendationCard></RecommendationCard>
       </div>
+      {/* </div> */}
       {/* {advancedSearch ? <RecommendationCard></RecommendationCard> : null} */}
       <Card>
         <Heading2 align="left">Friend feed</Heading2>
