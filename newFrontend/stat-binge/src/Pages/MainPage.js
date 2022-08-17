@@ -15,7 +15,7 @@ const mainPageStyle = {
   "gridGap": "15px",
   // "width": "100%",
   "padding": "15px",
-  // "height": "100vh",
+  "height": "100vh",
 }
 
 const testComment = {
@@ -34,7 +34,7 @@ const testComment2 = {
   "rating": 3,
   "episode": "S5 Ep1",
   "seen": false,
-  "comment": "Honestly mid as hell",
+  "comment": "Honestly mid as hellHonestly mid as hellHonestly mid as hellHonestly mid as hellHonestly mid as hellHonestly mid as hellHonestly mid as hellHonestly mid as hellHonestly mid as hellHonestly mid as hellHonestly mid as hellHonestly mid as hellHonestly mid as hellHonestly mid as hell",
   "timestamp": "2 days",
 }
 
