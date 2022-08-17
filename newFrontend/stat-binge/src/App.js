@@ -4,7 +4,7 @@ import { MainPage } from './Pages/MainPage';
 
 function App() {
   return (
-    <div className="App">
+    <div style={{"backgroundColor": "#121212"}} className="App">
       <NavBar />
       <MainPage />
     </div>
