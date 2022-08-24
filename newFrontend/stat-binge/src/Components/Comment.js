@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { purple, secondGray } from "../Colors";
+import { EmojiButton, ReactionButton, ReplyButton } from "./Button";
 import { RatingCanvas } from "./CanvasElements";
-import { Heading2 } from "./Headings";
+import { Heading2, Heading3 } from "./Headings";
 import { IconImage } from "./Image";
 import { SettingsButton } from "./Settings";
+import { SeenTag } from "./SpecialText";
+import { CommentText, TimeStamp } from "./Text";
 
 const feedCommentStyle = {
 
@@ -11,6 +14,7 @@ const feedCommentStyle = {
 const topRowStyle = {
     "display": "grid",
     "gridTemplateColumns": "50px 1fr 50px",
+    "gridGap": "10px",
 }
 
 const testDivStyle = {
@@ -23,19 +27,32 @@ const testDivStyle = {
 
 export function FeedComment(props){
     const data = props.data;
-    const [score, setScore] = useState(1.35);
-    const slider = <input id={"scoreSlider"} type={"range"} max={2} min={0} step={.05} onChange={() => setScore(document.getElementById("scoreSlider").value)}></input>;
+    const score = data.rating;
+    let hide = !data.seen;
 
     return (
-        <div>
+        <div stlye={{"margin": "10px 0"}}>
             <div style={topRowStyle}>
                 <IconImage image={data?.icon}></IconImage>
                 <Heading2 align="left">{data?.username}</Heading2>
                 <SettingsButton></SettingsButton>
             </div>
-            <RatingCanvas value={score}></RatingCanvas>
-            {slider}
-            <h1 style={{"color": "red"}}>{score}</h1>
+            <div style={{"margin": "10px 0 0 0"}}>
+                <RatingCanvas value={score / 5}></RatingCanvas>
+                <Heading3 align={"left"} color={purple}>{score + "/10"}</Heading3>
+            </div>
+            <div style={{"textAlign": "left", "margin": "0", "color": secondGray}}>
+                <h4 syle={{"display": "inline", "fontSize": "15px", "fontWeight": "normal", "textAlign": "left",}}>Commented on {data.episode} | <SeenTag seen={data.seen}></SeenTag></h4>
+            </div>
+            <CommentText hide={hide} handleClick={() => hide = true}>{data.comment}</CommentText>
+            <div style={{"margin": "10px 0", "textAlign": "left", "color": secondGray}}>
+                <EmojiButton></EmojiButton>
+                <ReactionButton></ReactionButton>
+                |
+                <ReplyButton></ReplyButton>
+                |
+                <TimeStamp>{data.TimeStamp}</TimeStamp>
+            </div>
         </div>
     );
 }

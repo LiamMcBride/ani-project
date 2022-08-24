@@ -6,3 +6,4 @@ export const purple = "#bb86fc";
 export const red = "#ff5151";
 export const black = "#121212";
 export const textColor = "#ffffff";
+export const green = "#6FFF57";
