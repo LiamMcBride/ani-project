@@ -17,7 +17,7 @@
     "background":{
         "service_worker": "background.js"
     },
-    "permissions": ["storage"],
+    "permissions": ["storage", "activeTab", "scripting"],
     "icons": {
         "16": "/images/logo_16.png",
         "32": "/images/logo_32.png",
